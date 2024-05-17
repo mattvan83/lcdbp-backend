@@ -20,12 +20,11 @@ const userSchema = mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
-      index: true,
-      match: [
-        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-        "Please provide a valid email",
-      ],
+      // unique: true,
+      // match: [
+      //   /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+      //   "Please provide a valid email",
+      // ],
     },
     birthDate: {
       type: Date,
@@ -37,12 +36,10 @@ const userSchema = mongoose.Schema(
     },
     phone: {
       type: String,
-      required: true,
       trim: true,
     },
     mobile: {
       type: String,
-      required: true,
       trim: true,
     },
     address: {
@@ -69,9 +66,8 @@ const userSchema = mongoose.Schema(
     username: {
       type: String,
       required: false,
-      unique: true,
+      // unique: true,
       trim: true,
-      index: true,
     },
     password: {
       type: String,

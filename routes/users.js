@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 const uid2 = require("uid2");
 const uniqid = require("uniqid");
 
+/* USER CREATION */
 router.post("/create", (req, res) => {
   if (
     !checkBody(req.body, [
@@ -74,6 +75,91 @@ router.post("/create", (req, res) => {
       } else {
         // User already exists in database
         res.json({ result: false, error: `User ${email} already exists` });
+      }
+    }
+  );
+});
+
+/* ACCOUNT CREATION */
+router.post("/signup", (req, res) => {
+  if (!checkBody(req.body, ["email", "username", "password"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const { email, username } = req.body;
+
+  // Check if the user with email ${email} has been created by the admin
+  User.findOne({
+    email: { $regex: new RegExp(email, "i") },
+  }).then((userByEmail) => {
+    if (userByEmail) {
+      if (!userByEmail.username || !userByEmail.password) {
+        User.findOne({
+          username: { $regex: new RegExp(username, "i") },
+        }).then((userByUsername) => {
+          if (!userByUsername) {
+            const { password } = req.body;
+            const hash = bcrypt.hashSync(password, 10);
+
+            userByEmail.username = username;
+            userByEmail.password = hash;
+            userByEmail.token = uid2(32);
+
+            userByEmail.save().then((newUser) => {
+              res.json({ result: true, token: newUser.token });
+            });
+          } else {
+            // Username
+            res.json({
+              result: false,
+              error: `Username ${username} already exists`,
+            });
+          }
+        });
+      } else {
+        // User with email ${email} has already sign-up
+        res.json({
+          result: false,
+          error: `User account with email ${email} has already been created`,
+        });
+      }
+    } else {
+      // User with email ${email} hasn't be created by the admin
+      res.json({
+        result: false,
+        error: `User with email ${email} hasn't the rights to join the members space`,
+      });
+    }
+  });
+});
+
+/* ACCOUNT CONNECTION */
+router.post("/signin", (req, res) => {
+  if (!checkBody(req.body, ["username", "password"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const { username, password } = req.body;
+
+  User.findOne({ username: { $regex: new RegExp(username, "i") } }).then(
+    (userByUsername) => {
+      if (!userByUsername) {
+        res.json({ result: false, error: `User ${username} not found` });
+      } else {
+        if (
+          userByUsername &&
+          bcrypt.compareSync(password, userByUsername.password)
+        ) {
+          res.json({
+            result: true,
+            token: userByUsername.token,
+            username: userByUsername.username,
+          });
+        } else {
+          res.json({ result: false, error: "Wrong password" });
+        }
       }
     }
   );

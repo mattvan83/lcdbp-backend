@@ -117,7 +117,7 @@ router.post("/signup", (req, res) => {
             // Username
             res.json({
               result: false,
-              error: `Username ${username} already exists`,
+              error: `Le nom d'utilisateur ${username} existe déjà`,
             });
           }
         });
@@ -132,7 +132,7 @@ router.post("/signup", (req, res) => {
       // User with email ${email} hasn't be created by the admin
       res.json({
         result: false,
-        error: `User with email ${email} hasn't the rights to join the members space`,
+        error: `L'email ${email} n'a pas les droits pour rejoindre l'espace membres. Contactez votre administrateur.`,
       });
     }
   });
@@ -150,7 +150,10 @@ router.post("/signin", (req, res) => {
   User.findOne({ username: { $regex: new RegExp(username, "i") } }).then(
     (userByUsername) => {
       if (!userByUsername) {
-        res.json({ result: false, error: `User ${username} not found` });
+        res.json({
+          result: false,
+          error: `L'utilisateur ${username} n'a pas été trouvé`,
+        });
       } else {
         if (
           userByUsername &&
@@ -162,7 +165,7 @@ router.post("/signin", (req, res) => {
             username: userByUsername.username,
           });
         } else {
-          res.json({ result: false, error: "Wrong password" });
+          res.json({ result: false, error: "Mauvais mot de passe" });
         }
       }
     }

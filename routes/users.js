@@ -70,7 +70,7 @@ router.post("/create", (req, res) => {
         const newUser = new User(userFields);
 
         newUser.save().then((newUser) => {
-          res.json({ result: true });
+          res.json({ result: true, newUser });
         });
       } else {
         // User already exists in database

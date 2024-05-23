@@ -79,29 +79,49 @@ router.post("/", async (req, res) => {
     .filter(Boolean)
     .join("\n");
 
-  const mailOptions = {
-    from: GMAIL_ADDRESS,
-    to: GMAIL_ADDRESS,
+  let transporter = nodemailer.createTransport({
+    host: "smtp-mail.outlook.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.OUTLOOK_EMAIL,
+      pass: process.env.OUTLOOK_PASSWORD,
+    },
+  });
+
+  let mailOptions = {
+    from: process.env.OUTLOOK_EMAIL,
+    to: "mattvan83@gmail.com",
     subject: "New Message from Contact Form",
     text: emailContent,
+    //  html: "<b>Hello world?</b>",
   };
 
-  try {
-    const newContact = new Contact(contactFields);
-    await newContact.save();
+  //   const mailOptions = {
+  //     from: GMAIL_ADDRESS,
+  //     to: GMAIL_ADDRESS,
+  //     subject: "New Message from Contact Form",
+  //     text: emailContent,
+  //   };
 
-    const transporter = await createTransporter();
-    // console.log("transporter: ", transporter);
+  const newContact = new Contact(contactFields);
+  await newContact.save();
 
-    await transporter.sendMail(mailOptions);
+  // const transporter = await createTransporter();
+  // console.log("transporter: ", transporter);
+  // await transporter.sendMail(mailOptions);
 
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      res.status(500).json({
+        result: false,
+        error: error,
+      });
+    }
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     res.status(200).json({ result: true, newContact });
-  } catch (error) {
-    res.status(500).json({
-      result: false,
-      error: error,
-    });
-  }
+  });
 });
 
 module.exports = router;

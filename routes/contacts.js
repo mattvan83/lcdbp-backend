@@ -56,8 +56,6 @@ router.post("/", async (req, res) => {
     return;
   }
 
-  console.log("req.body: ", req.body);
-
   const { firstname, lastname, email, phone, message, ownCopy } = req.body;
 
   const contactFields = {
@@ -71,8 +69,6 @@ router.post("/", async (req, res) => {
   if (phone) {
     contactFields.phone = phone;
   }
-
-  //   console.log("contactFields: ", contactFields);
 
   const emailContent = [
     `Nom: ${firstname} ${lastname}`,

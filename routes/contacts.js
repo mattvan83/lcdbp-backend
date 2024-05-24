@@ -77,7 +77,7 @@ router.post("/", async (req, res) => {
     `Message: ${message}`,
   ]
     .filter(Boolean)
-    .join("\n");
+    .join("\n\n");
 
   let transporter = nodemailer.createTransport({
     host: "smtp-mail.outlook.com",
@@ -92,6 +92,7 @@ router.post("/", async (req, res) => {
   let mailOptions = {
     from: process.env.OUTLOOK_EMAIL,
     to: "mattvan83@gmail.com",
+    cc: ownCopy ? email : "",
     subject: "New Message from Contact Form",
     text: emailContent,
     //  html: "<b>Hello world?</b>",

@@ -91,7 +91,7 @@ router.post("/", async (req, res) => {
 
   let mailOptions = {
     from: process.env.OUTLOOK_EMAIL,
-    to: "mattvan83@gmail.com",
+    to: process.env.OUTLOOK_EMAIL,
     cc: ownCopy ? email : "",
     subject: "New Message from Contact Form",
     text: emailContent,

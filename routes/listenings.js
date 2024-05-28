@@ -8,6 +8,7 @@ const User = require("../models/users");
 const Listening = require("../models/listenings");
 const { checkBody } = require("../modules/checkBody");
 
+// Upload listening data to Db and Cloudinary under admin rights
 router.post("/upload", async (req, res) => {
   if (
     !checkBody(req.body, [
@@ -128,6 +129,20 @@ router.post("/upload", async (req, res) => {
       error: "Administrateur non identifié en base de données",
     });
   }
+});
+
+// Get all listenings information
+router.get("/", (req, res) => {
+  Listening.find().then((listenings) => {
+    if (listenings.length) {
+      res.json({
+        result: true,
+        listenings,
+      });
+    } else {
+      res.json({ result: false, error: "Listenings not found" });
+    }
+  });
 });
 
 module.exports = router;

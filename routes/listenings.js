@@ -16,6 +16,7 @@ router.post("/upload", async (req, res) => {
       "authorMusic",
       "thumbnailDescription",
       "recordingDate",
+      "lastListening",
     ]) ||
     !checkBody(req.files, ["listeningFromFront", "thumbnailFromFront"])
   ) {
@@ -29,30 +30,97 @@ router.post("/upload", async (req, res) => {
   });
 
   if (userFound) {
-    const listeningPath = `./tmp/${uniqid()}.mp3`;
-    const listeningResultMove = await req.files.listeningFromFront.mv(
-      listeningPath
-    );
+    const { listeningFromFront, thumbnailFromFront } = req.files;
 
-    const thumbnailPath = `./tmp/${uniqid()}.jpg`;
-    const thumbnailResultMove = await req.files.thumbnailFromFront.mv(
-      thumbnailPath
-    );
+    const tmpDir = "./tmp";
+    if (!fs.existsSync(tmpDir)) {
+      fs.mkdirSync(tmpDir);
+    }
 
-    if (!listeningResultMove) {
-      if (!thumbnailResultMove) {
-        const resultCloudinary = await cloudinary.uploader.upload(
-          "./tmp/photo.jpg"
-        );
+    const listeningPath = `${tmpDir}/${uniqid()}.mp3`;
+    const thumbnailPath = `${tmpDir}/${uniqid()}.jpg`;
 
-        fs.unlinkSync("./tmp/photo.jpg");
+    try {
+      await listeningFromFront.mv(listeningPath);
+      await thumbnailFromFront.mv(thumbnailPath);
+    } catch (err) {
+      res.json({ result: false, error: "Error moving files: " + err.message });
+      return;
+    }
 
-        res.json({ result: true, url: resultCloudinary.secure_url });
-      } else {
-        res.json({ result: false, error: thumbnailResultMove });
+    try {
+      const uploadAudio = cloudinary.uploader.upload(listeningPath, {
+        resource_type: "video",
+        folder: "lcdbp/listenings/audio",
+        use_filename: true,
+      });
+      const uploadImage = cloudinary.uploader.upload(thumbnailPath, {
+        resource_type: "image",
+        folder: "lcdbp/listenings/images",
+        use_filename: true,
+      });
+
+      const [audioResult, imageResult] = await Promise.all([
+        uploadAudio,
+        uploadImage,
+      ]);
+
+      // console.log("audioResult: ", audioResult);
+      // console.log("imageResult: ", imageResult);
+
+      fs.unlinkSync(listeningPath);
+      fs.unlinkSync(thumbnailPath);
+
+      const {
+        title,
+        artwork,
+        authorText,
+        authorMusic,
+        arrangement,
+        harmonization,
+        thumbnailDescription,
+        recordingDate,
+        lastListening,
+      } = req.body;
+
+      const listeningFields = {
+        title,
+        audioUrl: audioResult.secure_url,
+        authorMusic,
+        thumbnailUrl: imageResult.secure_url,
+        thumbnailDescription,
+        recordingDate,
+        lastListening,
+      };
+
+      if (artwork) {
+        listeningFields.artwork = artwork;
       }
-    } else {
-      res.json({ result: false, error: listeningResultMove });
+
+      if (authorText) {
+        listeningFields.authorText = authorText;
+      }
+
+      if (arrangement) {
+        listeningFields.arrangement = arrangement;
+      }
+
+      if (harmonization) {
+        listeningFields.harmonization = harmonization;
+      }
+
+      const newListening = new Listening(listeningFields);
+
+      newListening.save().then((newListeningDB) => {
+        res.json({ result: true, newListening: newListeningDB });
+      });
+    } catch (err) {
+      fs.unlinkSync(listeningPath);
+      fs.unlinkSync(thumbnailPath);
+      res.json({
+        result: false,
+        error: "Error uploading to Cloudinary: " + err.message,
+      });
     }
   } else {
     res.json({

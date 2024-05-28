@@ -46,6 +46,10 @@ const listeningSchema = mongoose.Schema(
       type: Date,
       required: true,
     },
+    lastListening: {
+      type: Boolean,
+      required: true,
+    },
   },
   {
     timestamps: true,

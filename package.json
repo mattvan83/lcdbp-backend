@@ -15,11 +15,12 @@
     "dotenv": "^16.4.5",
     "express": "~4.16.1",
     "express-fileupload": "^1.5.0",
+    "form-data": "^4.0.0",
     "googleapis": "^137.1.0",
     "moment": "^2.30.1",
     "mongoose": "^8.3.5",
     "morgan": "~1.9.1",
-    "node-fetch": "2",
+    "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.13",
     "uid2": "^1.0.0",
     "uniqid": "^5.4.0"

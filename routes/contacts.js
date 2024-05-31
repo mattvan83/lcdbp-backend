@@ -80,7 +80,8 @@ router.post("/", async (req, res) => {
     .join("\n\n");
 
   let transporter = nodemailer.createTransport({
-    host: "smtp-mail.outlook.com",
+    // host: "smtp-mail.outlook.com",
+    host: "smtp.office365.com",
     port: 587,
     secure: false,
     auth: {
@@ -88,7 +89,7 @@ router.post("/", async (req, res) => {
       pass: process.env.OUTLOOK_PASSWORD,
     },
     tls: {
-      rejectUnauthorized: false,
+      ciphers: "SSLv3",
     },
   });
 

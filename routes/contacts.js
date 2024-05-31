@@ -106,6 +106,20 @@ router.post("/", async (req, res) => {
     });
   });
 
+  //   const mailOptions = {
+  //     from: GMAIL_ADDRESS,
+  //     to: GMAIL_ADDRESS,
+  //     subject: "New Message from Contact Form",
+  //     text: emailContent,
+  //   };
+
+  // const transporter = await createTransporter();
+  // console.log("transporter: ", transporter);
+  // await transporter.sendMail(mailOptions);
+
+  const newContact = new Contact(contactFields);
+  await newContact.save();
+
   let mailOptions = {
     from: process.env.OUTLOOK_EMAIL,
     to: process.env.OUTLOOK_EMAIL,
@@ -115,48 +129,21 @@ router.post("/", async (req, res) => {
     //  html: "<b>Hello world?</b>",
   };
 
-  //   const mailOptions = {
-  //     from: GMAIL_ADDRESS,
-  //     to: GMAIL_ADDRESS,
-  //     subject: "New Message from Contact Form",
-  //     text: emailContent,
-  //   };
-
-  const newContact = new Contact(contactFields);
-  await newContact.save();
-
-  // const transporter = await createTransporter();
-  // console.log("transporter: ", transporter);
-  // await transporter.sendMail(mailOptions);
-
   await new Promise((resolve, reject) => {
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
+        reject(error);
         res.status(500).json({
           result: false,
           error: error,
         });
-        reject(error);
       }
-
+      resolve(info);
       console.log("Message sent: %s", info.messageId);
       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
       res.status(200).json({ result: true, newContact });
-      resolve(info);
     });
   });
-
-  // transporter.sendMail(mailOptions, (error, info) => {
-  //   if (error) {
-  //     res.status(500).json({
-  //       result: false,
-  //       error: error,
-  //     });
-  //   }
-  //   console.log("Message sent: %s", info.messageId);
-  //   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  //   res.status(200).json({ result: true, newContact });
-  // });
 });
 
 module.exports = router;

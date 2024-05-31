@@ -87,10 +87,10 @@ router.post("/", async (req, res) => {
       user: process.env.OUTLOOK_EMAIL,
       pass: process.env.OUTLOOK_PASSWORD,
     },
-    // tls: {
-    //   ciphers: "SSLv3",
-    //   rejectUnauthorized: false,
-    // },
+    tls: {
+      ciphers: "SSLv3",
+      rejectUnauthorized: false,
+    },
   });
 
   await new Promise((resolve, reject) => {

@@ -87,10 +87,23 @@ router.post("/", async (req, res) => {
       user: process.env.OUTLOOK_EMAIL,
       pass: process.env.OUTLOOK_PASSWORD,
     },
-    tls: {
-      ciphers: "SSLv3",
-      rejectUnauthorized: false,
-    },
+    // tls: {
+    //   ciphers: "SSLv3",
+    //   rejectUnauthorized: false,
+    // },
+  });
+
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
   });
 
   let mailOptions = {
@@ -116,17 +129,34 @@ router.post("/", async (req, res) => {
   // console.log("transporter: ", transporter);
   // await transporter.sendMail(mailOptions);
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      res.status(500).json({
-        result: false,
-        error: error,
-      });
-    }
-    console.log("Message sent: %s", info.messageId);
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    res.status(200).json({ result: true, newContact });
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        res.status(500).json({
+          result: false,
+          error: error,
+        });
+        reject(error);
+      }
+
+      console.log("Message sent: %s", info.messageId);
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+      res.status(200).json({ result: true, newContact });
+      resolve(info);
+    });
   });
+
+  // transporter.sendMail(mailOptions, (error, info) => {
+  //   if (error) {
+  //     res.status(500).json({
+  //       result: false,
+  //       error: error,
+  //     });
+  //   }
+  //   console.log("Message sent: %s", info.messageId);
+  //   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  //   res.status(200).json({ result: true, newContact });
+  // });
 });
 
 module.exports = router;

@@ -124,7 +124,14 @@ router.post("/", async (req, res) => {
 
   const mailOptions = {
     to: process.env.OUTLOOK_EMAIL,
-    from: process.env.OUTLOOK_EMAIL,
+    from: {
+      email: GMAIL_ADDRESS, // From Email Address
+      name: "LCDBP application",
+    },
+    reply_to: {
+      email: process.env.OUTLOOK_EMAIL, // Reply To Email Address
+      name: "Le Choeur du Bon Pays",
+    },
     subject: "New Message from Contact Form",
     text: emailContent,
     // html: `<strong>${emailContent}</strong>`,

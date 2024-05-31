@@ -137,7 +137,7 @@ router.post("/", async (req, res) => {
   } catch (error) {
     res.status(500).json({
       result: false,
-      error: error.response ? error.response.body : error.message,
+      error: error,
     });
   }
 });

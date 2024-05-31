@@ -52,7 +52,7 @@ const listenings = [
   },
   {
     title: "Le Chœur des Esclaves",
-    artwork: "Opéra Nabucco",
+    artwork: "Nabucco",
     audioFile:
       "/Users/matthieu/Code/Web/siteChorale/Enregistrements/20240324_Le_choeur_des_esclaves_Vincelles.mp3",
     authorText: "",

@@ -88,9 +88,10 @@ router.post("/", async (req, res) => {
       user: process.env.OUTLOOK_EMAIL,
       pass: process.env.OUTLOOK_PASSWORD,
     },
-    // tls: {
-    //   ciphers: "SSLv3",
-    // },
+    tls: {
+      ciphers: "SSLv3",
+      rejectUnauthorized: false,
+    },
   });
 
   // await new Promise((resolve, reject) => {
@@ -139,23 +140,6 @@ router.post("/", async (req, res) => {
       error: error,
     });
   }
-
-  // await new Promise((resolve, reject) => {
-  //   transporter.sendMail(mailOptions, (error, info) => {
-  //     if (error) {
-  //       res.status(500).json({
-  //         result: false,
-  //         error: error,
-  //       });
-  //       reject(error);
-  //     } else {
-  //       // console.log("Message sent: %s", info.messageId);
-  //       // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  //       res.status(200).json({ result: true, newContact });
-  //       resolve(info);
-  //     }
-  //   });
-  // });
 });
 
 module.exports = router;

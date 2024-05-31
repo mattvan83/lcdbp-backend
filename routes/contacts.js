@@ -3,9 +3,11 @@ var router = express.Router();
 const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
+const sendGridMail = require("@sendgrid/mail");
 
 const Contact = require("../models/contacts");
 const { checkBody } = require("../modules/checkBody");
+sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Gmail credentials
 const GMAIL_ADDRESS = process.env.GMAIL_ADDRESS;
@@ -79,65 +81,63 @@ router.post("/", async (req, res) => {
     .filter(Boolean)
     .join("\n\n");
 
-  let transporter = nodemailer.createTransport({
-    host: "smtp-mail.outlook.com",
-    // host: "smtp.office365.com",
-    port: 587,
-    secure: false,
-    auth: {
-      user: process.env.OUTLOOK_EMAIL,
-      pass: process.env.OUTLOOK_PASSWORD,
-    },
-    tls: {
-      ciphers: "SSLv3",
-      rejectUnauthorized: false,
-    },
-  });
-
-  // await new Promise((resolve, reject) => {
-  //   // verify connection configuration
-  //   transporter.verify(function (error, success) {
-  //     if (error) {
-  //       console.log(error);
-  //       reject(error);
-  //     } else {
-  //       console.log("Server is ready to take our messages");
-  //       resolve(success);
-  //     }
-  //   });
-  // });
-
-  //   const mailOptions = {
-  //     from: GMAIL_ADDRESS,
-  //     to: GMAIL_ADDRESS,
-  //     subject: "New Message from Contact Form",
-  //     text: emailContent,
-  //   };
-
-  // const transporter = await createTransporter();
-  // console.log("transporter: ", transporter);
-  // await transporter.sendMail(mailOptions);
-
   const newContact = new Contact(contactFields);
   await newContact.save();
 
-  let mailOptions = {
-    from: process.env.OUTLOOK_EMAIL,
+  // // Use nodemailer
+  // let transporter = nodemailer.createTransport({
+  //   host: "smtp-mail.outlook.com",
+  //   // host: "smtp.office365.com",
+  //   port: 587,
+  //   secure: false,
+  //   auth: {
+  //     user: process.env.OUTLOOK_EMAIL,
+  //     pass: process.env.OUTLOOK_PASSWORD,
+  //   },
+  //   tls: {
+  //     ciphers: "SSLv3",
+  //     rejectUnauthorized: false,
+  //   },
+  // });
+
+  // let mailOptions = {
+  //   from: process.env.OUTLOOK_EMAIL,
+  //   to: process.env.OUTLOOK_EMAIL,
+  //   cc: ownCopy ? email : "",
+  //   subject: "New Message from Contact Form",
+  //   text: emailContent,
+  //   //  html: "<b>Hello world?</b>",
+  // };
+
+  // try {
+  //   await transporter.sendMail(mailOptions);
+  //   res.status(200).json({ result: true, newContact });
+  // } catch (error) {
+  //   res.status(500).json({
+  //     result: false,
+  //     error: error,
+  //   });
+  // }
+
+  // Use SendGrid
+  // console.log("OUTLOOK_EMAIL: ", process.env.OUTLOOK_EMAIL);
+
+  const mailOptions = {
     to: process.env.OUTLOOK_EMAIL,
-    cc: ownCopy ? email : "",
+    from: process.env.OUTLOOK_EMAIL,
     subject: "New Message from Contact Form",
     text: emailContent,
-    //  html: "<b>Hello world?</b>",
+    // html: `<strong>${emailContent}</strong>`,
+    cc: ownCopy ? email : "",
   };
 
-  // Send email using promise
   try {
-    await transporter.sendMail(mailOptions);
+    await sendGridMail.send(mailOptions);
     res.status(200).json({ result: true, newContact });
   } catch (error) {
     res.status(500).json({
       result: false,
-      error: error,
+      error: error.response ? error.response.body : error.message,
     });
   }
 });

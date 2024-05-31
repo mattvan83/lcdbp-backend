@@ -80,31 +80,31 @@ router.post("/", async (req, res) => {
     .join("\n\n");
 
   let transporter = nodemailer.createTransport({
-    // host: "smtp-mail.outlook.com",
-    host: "smtp.office365.com",
+    host: "smtp-mail.outlook.com",
+    // host: "smtp.office365.com",
     port: 587,
     secure: false,
     auth: {
       user: process.env.OUTLOOK_EMAIL,
       pass: process.env.OUTLOOK_PASSWORD,
     },
-    tls: {
-      ciphers: "SSLv3",
-    },
+    // tls: {
+    //   ciphers: "SSLv3",
+    // },
   });
 
-  await new Promise((resolve, reject) => {
-    // verify connection configuration
-    transporter.verify(function (error, success) {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        console.log("Server is ready to take our messages");
-        resolve(success);
-      }
-    });
-  });
+  // await new Promise((resolve, reject) => {
+  //   // verify connection configuration
+  //   transporter.verify(function (error, success) {
+  //     if (error) {
+  //       console.log(error);
+  //       reject(error);
+  //     } else {
+  //       console.log("Server is ready to take our messages");
+  //       resolve(success);
+  //     }
+  //   });
+  // });
 
   //   const mailOptions = {
   //     from: GMAIL_ADDRESS,
@@ -129,22 +129,33 @@ router.post("/", async (req, res) => {
     //  html: "<b>Hello world?</b>",
   };
 
-  await new Promise((resolve, reject) => {
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        res.status(500).json({
-          result: false,
-          error: error,
-        });
-        reject(error);
-      } else {
-        // console.log("Message sent: %s", info.messageId);
-        // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-        res.status(200).json({ result: true, newContact });
-        resolve(info);
-      }
+  // Send email using promise
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ result: true, newContact });
+  } catch (error) {
+    res.status(500).json({
+      result: false,
+      error: error,
     });
-  });
+  }
+
+  // await new Promise((resolve, reject) => {
+  //   transporter.sendMail(mailOptions, (error, info) => {
+  //     if (error) {
+  //       res.status(500).json({
+  //         result: false,
+  //         error: error,
+  //       });
+  //       reject(error);
+  //     } else {
+  //       // console.log("Message sent: %s", info.messageId);
+  //       // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  //       res.status(200).json({ result: true, newContact });
+  //       resolve(info);
+  //     }
+  //   });
+  // });
 });
 
 module.exports = router;

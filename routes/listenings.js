@@ -135,9 +135,20 @@ router.post("/upload", async (req, res) => {
 router.get("/", (req, res) => {
   Listening.find().then((listenings) => {
     if (listenings.length) {
+      const sortedListenings = listenings.sort((a, b) => {
+        // Sort by recording date first
+        const dateComparison =
+          new Date(b.recordingDate) - new Date(a.recordingDate);
+        if (dateComparison !== 0) {
+          return dateComparison;
+        }
+        // If recording dates are equal, sort by title
+        return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+      });
+
       res.json({
         result: true,
-        listenings,
+        listenings: sortedListenings,
       });
     } else {
       res.json({ result: false, error: "Listenings not found" });

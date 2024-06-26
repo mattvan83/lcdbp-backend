@@ -672,4 +672,296 @@ const pressReviews = [
     thumbnailDescription: "Revue de presse du 26 Juillet 2014",
     lastPressReview: false,
   },
+  {
+    title:
+      "Le Chœur du Bon Pays redémarre les répétitions avec un nouveau chef",
+    journal: "Le Progrès",
+    date: new Date("2013-8-30"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-08-30_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 30 Août 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Bon Pays redémarre fait sa rentrée",
+    journal: "Le Journal de Saône et Loire",
+    date: new Date("2013-8-30"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-08-30_JSL.jpg",
+    thumbnailDescription: "Revue de presse du 30 Août 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Chœur du Bon Pays : changement de direction",
+    journal: "La Voix du Jura",
+    date: new Date("2013-8-29"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-08-29_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 29 Août 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Deux chorales pour un concert",
+    journal: "Le Progrès",
+    date: new Date("2013-6-3"),
+    city: "Mesnay",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-06-03_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 3 Juin 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Trois choeurs d'or pour l'autisme",
+    journal: "La Voix du Jura",
+    date: new Date("2013-5-9"),
+    city: "Dompierre-Sur-Mont",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-05-09_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 9 Mai 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Des choeurs d'or pour lutter contre l'autisme",
+    journal: "Le Progrès",
+    date: new Date("2013-5-7"),
+    city: "Dompierre-Sur-Mont",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-05-07_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 7 Mai 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Concert de chorales",
+    journal: "Le Progrès",
+    date: new Date("2013-5-4"),
+    city: "Dompierre-Sur-Mont",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-05-04_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 4 Mai 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Trois chorales pour un foyer d'autistes",
+    journal: "Le Progrès",
+    date: new Date("2013-5-3"),
+    city: "Dompierre-Sur-Mont",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-05-03_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 3 Mai 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Trois chorales pour une bonne cause",
+    journal: "La Voix du Jura",
+    date: new Date("2013-5-2"),
+    city: "Dompierre-Sur-Mont",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-05-02_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 2 Mai 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Un chèque de 1000 euros pour la maison de retraite de Saint-Amour",
+    journal: "Le Progrès",
+    date: new Date("2013-3-20"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-03-20_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 20 Mars 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Le secret avait été bien gardé, la surprise a été totale",
+    journal: "Le Progrès",
+    date: new Date("2013-2-13"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-02-13_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 13 Février 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "A Bian, les animations se suivent",
+    journal: "Le Progrès",
+    date: new Date("2013-1-26"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-01-26_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 26 Janvier 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Avec le Chœur d'hommes du Bon Pays",
+    journal: "Le Progrès",
+    date: new Date("2013-1-13"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2013/13-01-13_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 13 Janvier 2013",
+    lastPressReview: false,
+  },
+  {
+    title: "Deux chorales en concert pour une première en église",
+    journal: "Le Progrès",
+    date: new Date("2012-10-17"),
+    city: "Supt",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-10-17_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 17 Octobre 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Les villageois ont fêté leur saint patron",
+    journal: "Le Progrès",
+    date: new Date("2012-9-22"),
+    city: "Cressia",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-09-22_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 22 Septembre 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Un week-end de Saint-Maurice dignement fêté",
+    journal: "La Voix du Jura",
+    date: new Date("2012-9-22"),
+    city: "Cressia",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-09-22_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 22 Septembre 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "C'est la rentrée pour le Chœur du Bon Pays",
+    journal: "La Voix du Jura",
+    date: new Date("2012-8-16"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-08-16_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 16 Août 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur du Bon Pays reprend du service",
+    journal: "Le Progrès",
+    date: new Date("2012-8-12"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-08-12_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 12 Août 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Les chorales chantent pour récolter des fonds de soutien",
+    journal: "La Voix du Jura",
+    date: new Date("2012-6-7"),
+    city: "Reithouse",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-06-07_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 7 Juin 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Un concert de trois chorales a rempli la salle des fêtes",
+    journal: "Le Progrès",
+    date: new Date("2012-6-5"),
+    city: "Reithouse",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-06-05_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 5 Juin 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Concert de chorales le 1er Juin",
+    journal: "Le Progrès",
+    date: new Date("2012-5-30"),
+    city: "Reithouse",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-05-30_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 30 Mai 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Les deux choeurs d'hommes ont rempli l'église",
+    journal: "Le Progrès",
+    date: new Date("2012-5-8"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-05-08_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 8 Mai 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Concert à l'église",
+    journal: "Le Journal de Saône et Loire",
+    date: new Date("2012-5-7"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-05-07_JSL.jpg",
+    thumbnailDescription: "Revue de presse du 7 Mai 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Deux choeurs d'hommes réunis pour un premier concert à Cousance",
+    journal: "Le Progrès",
+    date: new Date("2012-5-4"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-05-04_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 4 Mai 2012",
+    lastPressReview: false,
+  },
+  {
+    title:
+      "Le Chœur du Bon Pays reçoit Vénérabilis samedi - C'est son homologue de Macornay",
+    journal: "La Voix du Jura",
+    date: new Date("2012-5-3"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-05-03_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 3 Mai 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Deux choeurs unissent leurs voix",
+    journal: "La Voix du Jura",
+    date: new Date("2012-5-3"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-05-03_La_Voix_du_Jura_(2).jpg",
+    thumbnailDescription: "Revue de presse du 3 Mai 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Premier concert du Chœur du Bon Pays le 5 mai",
+    journal: "Le Journal de Saône et Loire",
+    date: new Date("2012-4-25"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-04-25_JSL.jpg",
+    thumbnailDescription: "Revue de presse du 25 Avril 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur du Bon Pays invite Vénérabilis",
+    journal: "Le Progrès",
+    date: new Date("2012-4-20"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-04-20_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 20 Avril 2012",
+    lastPressReview: false,
+  },
+  {
+    title: "Une église bondée pour un concert solidaire",
+    journal: "Le Progrès",
+    date: new Date("2012-4-2"),
+    city: "Montain",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2012/12-04-02_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 2 Avril 2012",
+    lastPressReview: false,
+  },
 ];

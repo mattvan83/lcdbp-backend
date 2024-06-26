@@ -341,4 +341,185 @@ const pressReviews = [
     thumbnailDescription: "Revue de presse du 8 Janvier 2018",
     lastPressReview: false,
   },
+  {
+    title: "904 euros récoltés pour Anouk lors d'un concert de la Cantative",
+    journal: "La Voix de L'Ain",
+    date: new Date("2017-12-19"),
+    city: "Marboz",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2017/17-12-19_La_Voix_de_l_Ain.jpg",
+    thumbnailDescription: "Revue de presse du 19 Décembre 2017",
+    lastPressReview: false,
+  },
+  {
+    title: "Un récital partagé entre chants sacrés et du terroir",
+    journal: "L'Indépendant",
+    date: new Date("2017-10-31"),
+    city: "Beaurepaire",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2017/17-10-31_L_independant.jpg",
+    thumbnailDescription: "Revue de presse du 31 Octobre 2017",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur du Bon Pays a comblé les mélomanes",
+    journal: "Le Journal de Saône et Loire",
+    date: new Date("2017-10-30"),
+    city: "Beaurepaire-en-Bresse",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2017/17-10-30_JSL.jpg",
+    thumbnailDescription: "Revue de presse du 30 Octobre 2017",
+    lastPressReview: false,
+  },
+  {
+    title: "Deux choeurs pour un concert en l'église de Saint-Amour",
+    journal: "Le Progrès",
+    date: new Date("2017-4-1"),
+    city: "Saint-Amour",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2017/17-04_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 1 Avril 2017",
+    lastPressReview: false,
+  },
+  {
+    title:
+      "Le Chœur du Bon Pays regroupe 30 voix d'hommes et donnera un concert samedi 29 avril",
+    journal: "L'Indépendant",
+    date: new Date("2017-4-1"),
+    city: "Saint-Amour",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2017/17-04_L_independant.jpg",
+    thumbnailDescription: "Revue de presse du 1 Avril 2017",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur d'Hommes du Bon Pays change de président",
+    journal: "Le Progrès",
+    date: new Date("2017-1-23"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2017/17-01-23_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 23 Janvier 2017",
+    lastPressReview: false,
+  },
+  {
+    title: "Chœur des Hommes du Bon Pays fait chanter l'automne",
+    journal: "Le Progrès",
+    date: new Date("2016-12-8"),
+    city: "Charchilla",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-12-08_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 8 Décembre 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Deux chorales pour aider à la restauration de l'église de Nanc",
+    journal: "Le Progrès",
+    date: new Date("2016-10-4"),
+    city: "Nanc-Lès-Saint-Amour",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-10-04_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 4 Octobre 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "En mémoire des résistants du petit maquis de Lanézia",
+    journal: "Le Progrès",
+    date: new Date("2016-8-1"),
+    city: "Cuisia",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-08-01_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 1 Août 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Instantanés",
+    journal: "La Voix du Jura",
+    date: new Date("2016-5-12"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-05-12_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 12 Mai 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur du Bon Pays chantera samedi avec la chorale Moligia",
+    journal: "Le Progrès",
+    date: new Date("2016-5-7"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-05-07_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 7 Mai 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "32 voix masculines à l'église",
+    journal: "L'Indépendant",
+    date: new Date("2016-4-15"),
+    city: "Saint-Germain-du-Bois",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-04-15_l_Independant.jpg",
+    thumbnailDescription: "Revue de presse du 15 Avril 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Les deux chorales ont uni leurs voix pour Retina France",
+    journal: "Le Progrès",
+    date: new Date("2016-4-2"),
+    city: "Saint-Julien",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-04-02_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 2 Avril 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Petite Montagne, instantané",
+    journal: "La Voix du Jura",
+    date: new Date("2016-4-2"),
+    city: "Saint-Julien",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-04-02_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 2 Avril 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Voix d'hommes",
+    journal: "Bulletin municipal",
+    date: new Date("2016-2-1"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-02_Bulletin_municipal.jpg",
+    thumbnailDescription: "Revue de presse du 1 Février 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur du Bon Pays recherche des nouvelles voix",
+    journal: "Le Progrès",
+    date: new Date("2016-1-14"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-01-14_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 14 Janvier 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur d'hommes du Bon Pays chantera en Pologne",
+    journal: "La Voix du Jura",
+    date: new Date("2016-1-14"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-01-14_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 14 Janvier 2016",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur du Bon Pays en appelle aux jeunes",
+    journal: "Le Journal de Saône et Loire",
+    date: new Date("2016-1-14"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2016/16-01-14_JSL.jpg",
+    thumbnailDescription: "Revue de presse du 14 Janvier 2016",
+    lastPressReview: false,
+  },
 ];

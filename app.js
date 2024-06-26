@@ -10,6 +10,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var contactsRouter = require("./routes/contacts");
 var listeningsRouter = require("./routes/listenings");
+var pressReviewsRouter = require("./routes/pressReviews");
 
 // const swaggerUi = require("swagger-ui-express");
 // const swaggerFile = require("./swagger-output.json");
@@ -36,5 +37,6 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/contacts", contactsRouter);
 app.use("/listenings", listeningsRouter);
+app.use("/pressReviews", pressReviewsRouter);
 
 module.exports = app;

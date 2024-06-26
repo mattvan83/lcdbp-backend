@@ -522,4 +522,154 @@ const pressReviews = [
     thumbnailDescription: "Revue de presse du 14 Janvier 2016",
     lastPressReview: false,
   },
+  {
+    title: "Les deux chorales ont été ovationnées",
+    journal: "Le Progrès",
+    date: new Date("2015-10-31"),
+    city: "Saint-Amour",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-10-31_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 31 Octobre 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "Deux chorales pour un concert",
+    journal: "Le Progrès",
+    date: new Date("2015-9-21"),
+    city: "Cressia",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-09-21_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 21 Septembre 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "Chorales en l'église",
+    journal: "Le Progrès",
+    date: new Date("2015-9-19"),
+    city: "Cressia",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-09-19_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 19 Septembre 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "Un festival en Pologne en 2013",
+    journal: "Le Progrès",
+    date: new Date("2015-8-15"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-08-15_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 15 Août 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "Instantané",
+    journal: "La Voix du Jura",
+    date: new Date("2015-5-28"),
+    city: "Nozeroy",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-05-28_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 28 Mai 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "Deux belles soirées musicales",
+    journal: "Le Progrès",
+    date: new Date("2015-5-25"),
+    city: "Nozeroy",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-05-25_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 25 Mai 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "Concert de printemps",
+    journal: "La Voix du Jura",
+    date: new Date("2015-5-21"),
+    city: "Nozeroy",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-05-21_La_Voix_du_Jura.jpg",
+    thumbnailDescription: "Revue de presse du 21 Mai 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "Du plaisir à chanter",
+    journal: "Bulletin municipal",
+    date: new Date("2015-2-1"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-02_Bulletin_municipal.jpg",
+    thumbnailDescription: "Revue de presse du 1 Février 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "'Chœur du Pays' : ils chantent avec le coeur",
+    journal: "Le Progrès",
+    date: new Date("2015-1-8"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2015/15-01-08_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 8 Janvier 2015",
+    lastPressReview: false,
+  },
+  {
+    title: "Concert de la chorale Résilia",
+    journal: "Le Progrès",
+    date: new Date("2014-11-22"),
+    city: "Courbouzon",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2014/14-11-22_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 22 Novembre 2014",
+    lastPressReview: false,
+  },
+  {
+    title: "La foule au concert",
+    journal: "Le Journal de Saône et Loire",
+    date: new Date("2014-10-22"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2014/14-10-22_JSL.jpg",
+    thumbnailDescription: "Revue de presse du 22 Octobre 2014",
+    lastPressReview: false,
+  },
+  {
+    title: "Le concert choral a rempli l'église",
+    journal: "Le Progrès",
+    date: new Date("2014-10-21"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2014/14-10-21_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 21 Octobre 2014",
+    lastPressReview: false,
+  },
+  {
+    title: "Le Chœur du Bon Pays prépare les concerts de la nouvelle saison",
+    journal: "Le Progrès",
+    date: new Date("2014-9-14"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2014/14-09-14_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 14 Septembre 2014",
+    lastPressReview: false,
+  },
+  {
+    title: "Chœur du Bon Pays",
+    journal: "Le Journal de Saône et Loire",
+    date: new Date("2014-8-30"),
+    city: "Cousance",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2014/14-08-30_JSL.jpg",
+    thumbnailDescription: "Revue de presse du 30 Août 2014",
+    lastPressReview: false,
+  },
+  {
+    title: "Journée du souvenir du 30 Juillet 1944",
+    journal: "Le Progrès",
+    date: new Date("2014-7-26"),
+    city: "Cuisia",
+    thumbnail:
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2014/14-07-26_Le_Progres.jpg",
+    thumbnailDescription: "Revue de presse du 26 Juillet 2014",
+    lastPressReview: false,
+  },
 ];

@@ -1217,7 +1217,7 @@ async function uploadPressReview(pressReview) {
   formData.append("journal", pressReview.journal);
   formData.append("city", pressReview.city);
   formData.append("thumbnailDescription", pressReview.thumbnailDescription);
-  formData.append("pressReviewDate", pressReview.pressReviewDate.toISOString());
+  formData.append("pressReviewDate", pressReview.date.toISOString());
   formData.append("token", "iG3PywQUOeAX-fslH9LqhZwg83No3yl_");
   formData.append("lastPressReview", pressReview.lastPressReview.toString());
 
@@ -1232,7 +1232,7 @@ async function uploadPressReview(pressReview) {
     });
 
     const text = await response.text(); // Get the response as text first
-    console.log("Response Text:", text);
+    // console.log("Response Text:", text);
 
     let data;
     try {

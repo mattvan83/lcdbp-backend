@@ -98,8 +98,8 @@ router.post("/upload", async (req, res) => {
   }
 });
 
-// Get all press reviews information
-router.get("/", (req, res) => {
+// Get all press reviews in list
+router.get("/list", (req, res) => {
   PressReview.find().then((pressReviews) => {
     if (pressReviews.length) {
       const sortedPressReviews = pressReviews.sort((a, b) => {
@@ -117,6 +117,57 @@ router.get("/", (req, res) => {
         result: true,
         pressReviews: sortedPressReviews,
       });
+    } else {
+      res.json({ result: false, error: "Press reviews not found" });
+    }
+  });
+});
+
+// Get all press reviews grouped by year in descending order
+router.get("/grouped", (req, res) => {
+  PressReview.aggregate([
+    {
+      $addFields: {
+        year: { $year: "$pressReviewDate" },
+      },
+    },
+    {
+      $group: {
+        _id: "$year",
+        pressReviews: {
+          $push: {
+            _id: "$_id",
+            title: "$title",
+            journal: "$journal",
+            city: "$city",
+            thumbnailUrl: "$thumbnailUrl",
+            thumbnailDescription: "$thumbnailDescription",
+            pressReviewDate: "$pressReviewDate",
+            lastPressReview: "$lastPressReview",
+            createdAt: "$createdAt",
+            updatedAt: "$updatedAt",
+          },
+        },
+      },
+    },
+    {
+      $project: {
+        _id: 0,
+        year: "$_id",
+        pressReviews: {
+          $sortArray: {
+            input: "$pressReviews",
+            sortBy: { pressReviewDate: -1 },
+          },
+        },
+      },
+    },
+    {
+      $sort: { year: -1 },
+    },
+  ]).then((pressReviews) => {
+    if (pressReviews.length) {
+      res.json({ result: true, pressReviews });
     } else {
       res.json({ result: false, error: "Press reviews not found" });
     }

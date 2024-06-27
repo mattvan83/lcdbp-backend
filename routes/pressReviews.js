@@ -167,7 +167,9 @@ router.get("/grouped", (req, res) => {
     },
   ]).then((pressReviewsGrouped) => {
     if (pressReviewsGrouped.length) {
-      res.json({ result: true, pressReviewsGrouped });
+      const years = pressReviewsGrouped.map((item) => item.year);
+
+      res.json({ result: true, years, pressReviewsGrouped });
     } else {
       res.json({ result: false, error: "Press reviews not found" });
     }

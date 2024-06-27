@@ -165,9 +165,9 @@ router.get("/grouped", (req, res) => {
     {
       $sort: { year: -1 },
     },
-  ]).then((pressReviews) => {
-    if (pressReviews.length) {
-      res.json({ result: true, pressReviews });
+  ]).then((pressReviewsGrouped) => {
+    if (pressReviewsGrouped.length) {
+      res.json({ result: true, pressReviewsGrouped });
     } else {
       res.json({ result: false, error: "Press reviews not found" });
     }

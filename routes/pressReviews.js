@@ -167,7 +167,7 @@ router.get("/grouped", (req, res) => {
     },
   ]).then((pressReviewsGrouped) => {
     if (pressReviewsGrouped.length) {
-      const years = pressReviewsGrouped.map((item) => item.year);
+      const years = pressReviewsGrouped.map((item) => item.year.toString());
 
       res.json({ result: true, years, pressReviewsGrouped });
     } else {

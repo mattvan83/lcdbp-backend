@@ -9,11 +9,11 @@ const pressReviews = [
   {
     title:
       "Inauguration et bénédiction de la chapelle restaurée Notre-Dame du Chêne",
-    journal: "L'Echo du Revermont'",
+    journal: "L'Echo du Revermont",
     date: new Date("2024-06-1"),
     city: "Cousance",
     thumbnail:
-      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2024/2024-06_L_Echo_du_Revermont-min.png",
+      "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2024/2024-06_L_Echo_du_Revermont-min.jpg",
     thumbnailDescription:
       "Revue de presse du 1 Juin 2024 : Inauguration et bénédiction de la chapelle restaurée Notre-Dame du Chêne",
     lastPressReview: true,
@@ -94,7 +94,7 @@ const pressReviews = [
       "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2022/2022-09-11_Le_Progres-min.jpg",
     thumbnailDescription:
       "Revue de presse du 11 Septembre 2022 : Le Chœur du Bon Pays a repris les répétitions",
-    lastPressReview: true,
+    lastPressReview: false,
   },
   {
     title: "Alain Dargaud, nouveau président du Chœur du Bon Pays",
@@ -105,7 +105,7 @@ const pressReviews = [
       "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2022/2022-07-26_Le_Progres-min.png",
     thumbnailDescription:
       "Revue de presse du 26 Juillet 2022 : Alain Dargaud, nouveau président du Chœur du Bon Pays",
-    lastPressReview: true,
+    lastPressReview: false,
   },
   {
     title: "Le Chœur du Bon Pays a rendu hommage à  son chef sur le départ",
@@ -116,7 +116,7 @@ const pressReviews = [
       "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2022/2022-06-27_Le_Progres-min.jpg",
     thumbnailDescription:
       "Revue de presse du 27 Juin 2022 : Le Chœur du Bon Pays a rendu hommage à  son chef sur le départ",
-    lastPressReview: true,
+    lastPressReview: false,
   },
   {
     title: "Le Chœur du Bon Pays et la Perrina réunis pour la bonne cause",
@@ -127,7 +127,7 @@ const pressReviews = [
       "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2022/2022-06-14_Le_Progres-min.png",
     thumbnailDescription:
       "Revue de presse du 14 Juin 2022 : Le Chœur du Bon Pays et la Perrina réunis pour la bonne cause",
-    lastPressReview: true,
+    lastPressReview: false,
   },
   {
     title: "Le Chœur du Bon Pays va (enfin) fêter ses 10 ans",
@@ -138,7 +138,7 @@ const pressReviews = [
       "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2022/2022-03-04_Le_Progres-min.png",
     thumbnailDescription:
       "Revue de presse du 4 Mars 2022 : Le Chœur du Bon Pays va (enfin) fêter ses 10 ans",
-    lastPressReview: true,
+    lastPressReview: false,
   },
   {
     title: "Le Chœur du Bon Pays a repris les répétitions",
@@ -163,7 +163,7 @@ const pressReviews = [
   },
   {
     title: "Le Chœur du Bon Pays prépare son avenir",
-    journal: "Actu Lons et Région",
+    journal: "Le Progrès",
     date: new Date("2021-7-8"),
     city: "Cousance",
     thumbnail:
@@ -1272,12 +1272,16 @@ async function uploadPressReview(pressReview) {
 
   // Use path module to resolve file paths
   const thumbnailFilePath = path.resolve(pressReview.thumbnail);
+  const thumbnailFileExtension = path.extname(pressReview.thumbnail);
 
   // Ensure files exist before creating read streams
   if (!fs.existsSync(thumbnailFilePath)) {
     console.error(`Thumbnail file does not exist: ${thumbnailFilePath}`);
     return;
   }
+  //  else {
+  //   console.error(`Thumbnail file exists: ${thumbnailFilePath}`);
+  // }
 
   formData.append("thumbnailFromFront", fs.createReadStream(thumbnailFilePath));
   formData.append("title", pressReview.title);
@@ -1287,6 +1291,7 @@ async function uploadPressReview(pressReview) {
   formData.append("pressReviewDate", pressReview.date.toISOString());
   formData.append("token", "iG3PywQUOeAX-fslH9LqhZwg83No3yl_");
   formData.append("lastPressReview", pressReview.lastPressReview.toString());
+  formData.append("thumbnailExtension", thumbnailFileExtension);
 
   // console.log("formData: ", formData);
 

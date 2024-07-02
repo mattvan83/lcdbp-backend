@@ -19,6 +19,7 @@ router.post("/upload", async (req, res) => {
       "thumbnailDescription",
       "pressReviewDate",
       "lastPressReview",
+      "thumbnailExtension",
     ]) ||
     !checkBody(req.files, ["thumbnailFromFront"])
   ) {
@@ -34,12 +35,14 @@ router.post("/upload", async (req, res) => {
   if (userFound) {
     const { thumbnailFromFront } = req.files;
 
+    const { imageExtension } = req.body;
+
     const tmpDir = "./tmp";
     if (!fs.existsSync(tmpDir)) {
       fs.mkdirSync(tmpDir);
     }
 
-    const thumbnailPath = `${tmpDir}/${uniqid()}.jpg`;
+    const thumbnailPath = `${tmpDir}/${uniqid()}${imageExtension}`;
 
     try {
       await thumbnailFromFront.mv(thumbnailPath);

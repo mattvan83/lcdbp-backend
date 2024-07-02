@@ -52,14 +52,14 @@ const pressReviews = [
     lastPressReview: true,
   },
   {
-    title: "Le 'Chœur du Bon Pays' en concert ce dimanche",
+    title: "Le Chœur du Bon Pays en concert ce dimanche",
     journal: "Le Progrès",
     date: new Date("2023-12-6"),
     city: "Saint-Etienne-Du-Bois",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Revue_de_presse/2023/2023-12-06_Le_Progres-min.png",
     thumbnailDescription:
-      "Revue de presse du 6 Décembre 2023 : Le 'Chœur du Bon Pays' en concert ce dimanche",
+      "Revue de presse du 6 Décembre 2023 : Le Chœur du Bon Pays en concert ce dimanche",
     lastPressReview: true,
   },
   {

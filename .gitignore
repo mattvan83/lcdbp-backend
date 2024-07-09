@@ -61,7 +61,7 @@ typings/
 .next
 
 # Data files
-events.js
-listening.js
-pressReviews.js
-users.js
+/events.js
+/listenings.js
+/pressReviews.js
+/users.js

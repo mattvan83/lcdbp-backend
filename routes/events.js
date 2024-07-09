@@ -5,20 +5,21 @@ const cloudinary = require("cloudinary").v2;
 const fs = require("fs");
 
 const User = require("../models/users");
-const PressReview = require("../models/pressReviews");
+const Event = require("../models/events");
 const { checkBody } = require("../modules/checkBody");
 
-// Upload press review data to Db and Cloudinary under admin rights
+// Upload event data to Db and Cloudinary under admin rights
 router.post("/upload", async (req, res) => {
   if (
     !checkBody(req.body, [
       "token",
       "title",
-      "journal",
+      "place",
       "city",
+      "chores",
       "thumbnailDescription",
-      "pressReviewDate",
-      "lastPressReview",
+      "eventDate",
+      "price",
       "imageExtension",
     ]) ||
     !checkBody(req.files, ["thumbnailFromFront"])
@@ -54,7 +55,7 @@ router.post("/upload", async (req, res) => {
     try {
       const imageResult = await cloudinary.uploader.upload(thumbnailPath, {
         resource_type: "image",
-        folder: "lcdbp/pressReviews/images",
+        folder: "lcdbp/events/images",
         use_filename: true,
       });
 
@@ -64,27 +65,29 @@ router.post("/upload", async (req, res) => {
 
       const {
         title,
-        journal,
+        place,
         city,
+        chores,
         thumbnailDescription,
-        pressReviewDate,
-        lastPressReview,
+        eventDate,
+        price,
       } = req.body;
 
-      const pressReviewFields = {
+      const eventFields = {
         title,
-        journal,
+        place,
         city,
+        chores,
         thumbnailUrl: imageResult.secure_url,
         thumbnailDescription,
-        pressReviewDate,
-        lastPressReview,
+        eventDate,
+        price,
       };
 
-      const newPressReview = new PressReview(pressReviewFields);
+      const newEvent = new Event(eventFields);
 
-      newPressReview.save().then((newPressReviewDB) => {
-        res.json({ result: true, newPressReview: newPressReviewDB });
+      newEvent.save().then((newEventDB) => {
+        res.json({ result: true, newEvent: newEventDB });
       });
     } catch (err) {
       fs.unlinkSync(thumbnailPath);
@@ -101,52 +104,63 @@ router.post("/upload", async (req, res) => {
   }
 });
 
-// Get all press reviews in list
+// Get all up-to-date events in list
 router.get("/list", (req, res) => {
-  PressReview.find().then((pressReviews) => {
-    if (pressReviews.length) {
-      const sortedPressReviews = pressReviews.sort((a, b) => {
-        // Sort by recording date first
-        const dateComparison =
-          new Date(b.pressReviewDate) - new Date(a.pressReviewDate);
-        if (dateComparison !== 0) {
-          return dateComparison;
-        }
-        // If recording dates are equal, sort by title
-        return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+  Event.find().then((events) => {
+    if (events.length) {
+      // Filter out events that have already passed
+      const currentDate = new Date();
+      const filteredEvents = events.filter((event) => {
+        return new Date(event.eventDate) >= currentDate;
       });
 
-      res.json({
-        result: true,
-        pressReviews: sortedPressReviews,
-      });
+      if (filteredEvents.length) {
+        // Sort events in descending order
+        const sortedEvents = filteredEvents.sort((a, b) => {
+          // Sort by recording date first
+          const dateComparison = new Date(b.eventDate) - new Date(a.eventDate);
+          if (dateComparison !== 0) {
+            return dateComparison;
+          }
+          // If recording dates are equal, sort by title
+          return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+        });
+
+        res.json({
+          result: true,
+          events: sortedEvents,
+        });
+      } else {
+        res.json({ result: false, error: "Events have already passed" });
+      }
     } else {
-      res.json({ result: false, error: "Press reviews not found" });
+      res.json({ result: false, error: "Events not found" });
     }
   });
 });
 
-// Get all press reviews grouped by year in descending order
+// Get all events grouped by year in descending order
 router.get("/grouped", (req, res) => {
-  PressReview.aggregate([
+  Event.aggregate([
     {
       $addFields: {
-        year: { $year: "$pressReviewDate" },
+        year: { $year: "$eventDate" },
       },
     },
     {
       $group: {
         _id: "$year",
-        pressReviews: {
+        events: {
           $push: {
             _id: "$_id",
             title: "$title",
-            journal: "$journal",
+            place: "$place",
             city: "$city",
+            chores: "$chores",
             thumbnailUrl: "$thumbnailUrl",
             thumbnailDescription: "$thumbnailDescription",
-            pressReviewDate: "$pressReviewDate",
-            lastPressReview: "$lastPressReview",
+            eventDate: "$eventDate",
+            price: "$price",
             createdAt: "$createdAt",
             updatedAt: "$updatedAt",
           },
@@ -157,10 +171,10 @@ router.get("/grouped", (req, res) => {
       $project: {
         _id: 0,
         year: "$_id",
-        pressReviews: {
+        events: {
           $sortArray: {
-            input: "$pressReviews",
-            sortBy: { pressReviewDate: -1 },
+            input: "$events",
+            sortBy: { eventDate: -1 },
           },
         },
       },
@@ -168,13 +182,13 @@ router.get("/grouped", (req, res) => {
     {
       $sort: { year: -1 },
     },
-  ]).then((pressReviewsGrouped) => {
-    if (pressReviewsGrouped.length) {
-      const years = pressReviewsGrouped.map((item) => item.year.toString());
+  ]).then((eventsGrouped) => {
+    if (eventsGrouped.length) {
+      const years = eventsGrouped.map((item) => item.year.toString());
 
-      res.json({ result: true, years, pressReviewsGrouped });
+      res.json({ result: true, years, eventsGrouped });
     } else {
-      res.json({ result: false, error: "Press reviews not found" });
+      res.json({ result: false, error: "Events not found" });
     }
   });
 });

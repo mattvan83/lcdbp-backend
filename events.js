@@ -12,8 +12,7 @@ const events = [
     date: new Date("2024-09-29T16:00:00"),
     city: "Château-Chalon",
     place: "Eglise Saint-Pierre",
-    chore:
-      "Les Chœurs des Trois Pays : Les Mouraches, La Perrina et le Chœur du Bon Pays",
+    chores: ["Les Mouraches", "La Perrina", "Le Chœur du Bon Pays"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2024-09-29_Concert_Château-Chalon-min.jpg",
@@ -26,7 +25,7 @@ const events = [
     date: new Date("2024-03-24T16:00:00"),
     city: "Val-Sonnette",
     place: "Eglise de Vincelles",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2024-03-24_Concert_Vincelles-min.png",
@@ -38,8 +37,7 @@ const events = [
     date: new Date("2023-12-10T16:00:00"),
     city: "Beaufort",
     place: "Eglise",
-    chore:
-      "La Chorale Résila dirigée par Bénédicte Cortot et le Chœur du Bon Pays de Cousance",
+    chores: ["La Chorale Résila", "Le Chœur du Bon Pays"],
     price: "Entrée au chapeau",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2023-12-10_Concert_Beaufort-min.jpg",
@@ -51,7 +49,7 @@ const events = [
     date: new Date("2023-10-07T20:30:00"),
     city: "Digna",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "10€ / Gratuit - 12 ans",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2023-10-07_Concert_Digna-min.jpg",
@@ -64,7 +62,7 @@ const events = [
     date: new Date("2023-04-15T20:30:00"),
     city: "Saint-Etienne-du-Bois",
     place: "Salle des Fêtes",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "10€ / Gratuit - 12 ans",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2023-04-15_Concert_Saint-Etienne-du-Bois-min.jpg",
@@ -77,7 +75,7 @@ const events = [
     date: new Date("2022-06-11T20:30:00"),
     city: "Perrigny",
     place: "Eglise Saint Jean-Baptiste",
-    chore: "La Chorale La Perrina et le Chœur du Bon Pays",
+    chores: ["La Chorale La Perrina", "Le Chœur du Bon Pays"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2022-06-11_Concert_Perrigny-min.jpg",
@@ -89,7 +87,7 @@ const events = [
     date: new Date("2022-06-04T20:00:00"),
     city: "Dommartin Les Cuiseaux",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "10€",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2022-06-04_Concert_Dommartin_les_Cuiseaux-min.jpg",
@@ -102,7 +100,7 @@ const events = [
     date: new Date("2022-05-15T17:00:00"),
     city: "Cousance",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "10€ / Gratuit - 16 ans",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2022-05-15_Concert_Cousance-min.jpg",
@@ -115,7 +113,7 @@ const events = [
     date: new Date("2022-04-09T20:30:00"),
     city: "Saint-Amour",
     place: "Salle de la Chevalerie",
-    chore: "Le Chœur du Bon Pays et le Chœur féminin 'A corps et à cris'",
+    chores: ["Le Chœur du Bon Pays", "Le Chœur féminin 'A corps et à cris'"],
     price: "10€ / Gratuit - 16 ans",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2022-04-09_Concert_St_Amour-min.jpg",
@@ -128,8 +126,7 @@ const events = [
     date: new Date("2019-10-13T16:00:00"),
     city: "Château-Chalon",
     place: "Eglise Saint-Pierre",
-    chore:
-      "Les Chœurs des Trois Pays : Les Mouraches, La Perrina et le Chœur du Bon Pays",
+    chores: ["Les Mouraches", "La Perrina", "Le Chœur du Bon Pays"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2019-10-13_Concert_Château-Chalon-min.jpg",
@@ -141,7 +138,7 @@ const events = [
     date: new Date("2019-05-11T20:30:00"),
     city: "Saint-Laurent-la-Roche",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "10€ / Gratuit - 18 ans",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2019-05-11_Siant-Laurent-la-Roche-min.png",
@@ -153,7 +150,7 @@ const events = [
     date: new Date("2019-03-16T20:00:00"),
     city: "Cousance",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et la Guillerette",
+    chores: ["Le Chœur du Bon Pays", "La Guillerette"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2019-03-16_Concert_Cousance-min.PNG",
@@ -165,7 +162,7 @@ const events = [
     date: new Date("2018-10-13T20:30:00"),
     city: "Saillenard",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "6€ / Gratuit pour les scolaires",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2018-10-13_Concert_Saillenard-min.JPG",
@@ -177,7 +174,7 @@ const events = [
     date: new Date("2018-09-15T20:30:00"),
     city: "Champagnat",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et la Chorale La Guillerette",
+    chores: ["Le Chœur du Bon Pays", "La Guillerette"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2018-09-15_Concert_Champagnat-min.JPG",
@@ -189,7 +186,7 @@ const events = [
     date: new Date("2018-05-12T20:30:00"),
     city: "Digna",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et les Chanteurs du Val de Mâtre",
+    chores: ["Le Chœur du Bon Pays", "Les Chanteurs du Val de Mâtre"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2018-05-12_Concert_Digna-min.jpg",
@@ -201,7 +198,7 @@ const events = [
     date: new Date("2018-04-22T16:00:00"),
     city: "Allinges",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2018-04-22_Concert_Allinges-min.jpg",
@@ -213,7 +210,7 @@ const events = [
     date: new Date("2018-03-18T16:00:00"),
     city: "Beaufort",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et la Suranelle",
+    chores: ["Le Chœur du Bon Pays", "La Suranelle"],
     price: "10€ / Demi tarif 12-16 ans / Gratuit pour - 12 ans",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2018-03-16_Concert_Beaufort-min.jpg",
@@ -226,7 +223,7 @@ const events = [
     date: new Date("2018-02-04T15:00:00"),
     city: "Chapelle-thècle",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et les Cigales de Romenay",
+    chores: ["Le Chœur du Bon Pays", "Les Cigales de Romenay"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2018-02-04_Concert_Chapelle-Thècle-min.jpg",
@@ -238,7 +235,7 @@ const events = [
     date: new Date("2017-12-17T16:00:00"),
     city: "Bény",
     place: "Eglise",
-    chore: "La Cantavive de Marboz et le Chœur du Bon Pays de Cousance",
+    chores: ["Le Chœur du Bon Pays", "La CantaVive"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2017-12-17_Concert_Bény-min.jpg",
@@ -250,8 +247,10 @@ const events = [
     date: new Date("2017-12-10T16:00:00"),
     city: "Sagy",
     place: "Eglise",
-    chore:
-      "Les Chanteurs de la Vallière et les P'tits Chanteurs, et le Bon Pays de Cousance",
+    chores: [
+      "Le Chœur du Bon Pays",
+      "Les Chanteurs de la Vallière et les P'tits Chanteurs",
+    ],
     price: "6€ / Gratuit - 12 ans",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2017-12-10_Concert_Sagy-min.jpg",
@@ -262,7 +261,7 @@ const events = [
     date: new Date("2017-10-28T20:00:00"),
     city: "Beaurepaire-en-Bresse",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2017-10-28_Concert_Beaurepaire-min.jpg",
@@ -274,7 +273,7 @@ const events = [
     date: new Date("2017-06-03T18:00:00"),
     city: "Rosay",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2017-06-03_Concert_Rosay-min.jpg",
@@ -286,7 +285,7 @@ const events = [
     date: new Date("2017-04-29T20:30:00"),
     city: "Saint-Amour",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et la Guillerette",
+    chores: ["Le Chœur du Bon Pays", "La Guillerette"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2017-04-29_Concert_St_Amour-min.jpg",
@@ -298,7 +297,7 @@ const events = [
     date: new Date("2017-04-01T20:00:00"),
     city: "Guereins",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et les Chanteurs du Val de Mâtre",
+    chores: ["Le Chœur du Bon Pays", "Les Chanteurs du Val de Mâtre"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2017-04-01_Concert_Guereins-min.jpg",
@@ -310,7 +309,7 @@ const events = [
     date: new Date("2016-12-11T16:30:00"),
     city: "Charchilla",
     place: "Eglise Saint-Pierre et Saint-Paul",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "10€ / Gratuit - 12 ans",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2016-12-11_Concert_Charchilla-min.jpg",
@@ -322,7 +321,7 @@ const events = [
     date: new Date("2016-10-22T20:30:00"),
     city: "Maynal",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et la Chorale Résila",
+    chores: ["Le Chœur du Bon Pays", "La Chorale Résila"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2016-10-22_Concert_Maynal-min.jpg",
@@ -334,7 +333,7 @@ const events = [
     date: new Date("2016-05-07T20:30:00"),
     city: "Cousance",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et la Molegia",
+    chores: ["Le Chœur du Bon Pays", "La Molegia"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2016-05-16_Concert_Cousance-min.jpg",
@@ -346,7 +345,7 @@ const events = [
     date: new Date("2016-04-10T15:00:00"),
     city: "Saint-Germain du Bois",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2016-04-10_Concert_St-Germain_du_Bois-min.jpg",
@@ -358,7 +357,7 @@ const events = [
     date: new Date("2015-10-31T20:30:00"),
     city: "Saint-Amour",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et la CantaVive",
+    chores: ["Le Chœur du Bon Pays", "La CantaVive"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2015-10-31_Concert_St_Amour-min.jpg",
@@ -371,7 +370,7 @@ const events = [
     date: new Date("2014-10-18T20:30:00"),
     city: "Saint-Amour",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et la CantaVive",
+    chores: ["Le Chœur du Bon Pays"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2014-10-18_Concert_Cousance-min.jpg",
@@ -384,7 +383,7 @@ const events = [
     date: new Date("2013-06-01T20:30:00"),
     city: "Mesnay",
     place: "Eglise",
-    chore: "La Chorale Chantevigne et le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays", "La Chorale Chantevigne"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2013-06-01_Concert_Mesnay-min.jpg",
@@ -396,8 +395,11 @@ const events = [
     date: new Date("2013-05-04T20:00:00"),
     city: "Dompierre sur Mont",
     place: "Eglise",
-    chore:
-      "Les Demoiselles de Lorraine, la Voisinale de Joux et le Chœur du Bon Pays",
+    chores: [
+      "Le Chœur du Bon Pays",
+      "Les Demoiselles de Lorraine",
+      "La Voisinale de Joux",
+    ],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2013-05-04_Concert_Dompierre-min.jpg",
@@ -410,7 +412,7 @@ const events = [
     date: new Date("2012-06-01T20:30:00"),
     city: "Reithouse",
     place: "Salle des Fêtes",
-    chore: "La Tourgelaine, la Clairpontoise et le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays", "La Tourgelaine", "La Clairpontoise"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2012-06-01_Concert_Reithouse-min.jpg",
@@ -422,7 +424,7 @@ const events = [
     date: new Date("2012-05-05T20:30:00"),
     city: "Cousance",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et Vénérabilis",
+    chores: ["Le Chœur du Bon Pays", "Vénérabilis"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2012-05-05_Concert_Cousance-min.jpg",
@@ -435,7 +437,7 @@ const events = [
     date: new Date("2012-03-31T20:00:00"),
     city: "Montain",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays et l'harmonie de Savigny en Revermont",
+    chores: ["Le Chœur du Bon Pays"],
     price: "Participation libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2012-03-31_Concert_Montain-min.jpg",
@@ -447,7 +449,7 @@ const events = [
     date: new Date("2011-06-03T20:30:00"),
     city: "Gizia",
     place: "Eglise",
-    chore: "Le Chœur du Bon Pays",
+    chores: ["Le Chœur du Bon Pays"],
     price: "Entrée libre",
     thumbnail:
       "/Users/matthieu/Code/Web/siteChorale/Affiches/2011-06-03_Concert_Gizia-min.jpg",

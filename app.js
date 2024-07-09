@@ -11,6 +11,7 @@ var usersRouter = require("./routes/users");
 var contactsRouter = require("./routes/contacts");
 var listeningsRouter = require("./routes/listenings");
 var pressReviewsRouter = require("./routes/pressReviews");
+var eventsRouter = require("./routes/events");
 
 // const swaggerUi = require("swagger-ui-express");
 // const swaggerFile = require("./swagger-output.json");
@@ -38,5 +39,6 @@ app.use("/users", usersRouter);
 app.use("/contacts", contactsRouter);
 app.use("/listenings", listeningsRouter);
 app.use("/pressReviews", pressReviewsRouter);
+app.use("/events", eventsRouter);
 
 module.exports = app;

@@ -523,7 +523,7 @@ async function uploadEvent(event) {
 }
 
 async function uploadAllEvents() {
-  for (const event of [events[0]]) {
+  for (const event of events) {
     await uploadEvent(event);
   }
 }

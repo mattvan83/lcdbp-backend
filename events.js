@@ -479,13 +479,14 @@ async function uploadEvent(event) {
 
   formData.append("thumbnailFromFront", fs.createReadStream(thumbnailFilePath));
   formData.append("title", event.title);
-  formData.append("journal", event.journal);
+  formData.append("place", event.place);
   formData.append("city", event.city);
+  formData.append("chores", event.chores);
   formData.append("thumbnailDescription", event.thumbnailDescription);
   formData.append("eventDate", event.date.toISOString());
   formData.append("token", "iG3PywQUOeAX-fslH9LqhZwg83No3yl_");
-  formData.append("lastevent", event.lastevent.toString());
-  formData.append("thumbnailExtension", thumbnailFileExtension);
+  formData.append("price", event.price);
+  formData.append("imageExtension", thumbnailFileExtension);
 
   // console.log("formData: ", formData);
 

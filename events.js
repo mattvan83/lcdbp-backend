@@ -481,14 +481,17 @@ async function uploadEvent(event) {
   formData.append("title", event.title);
   formData.append("place", event.place);
   formData.append("city", event.city);
-  formData.append("chores", event.chores);
+  formData.append("chores", JSON.stringify(event.chores));
+  //   event.chores.forEach((chore, index) => {
+  //     formData.append(`chores[${index}]`, chore);
+  //   });
   formData.append("thumbnailDescription", event.thumbnailDescription);
   formData.append("eventDate", event.date.toISOString());
   formData.append("token", "iG3PywQUOeAX-fslH9LqhZwg83No3yl_");
   formData.append("price", event.price);
   formData.append("imageExtension", thumbnailFileExtension);
 
-  // console.log("formData: ", formData);
+  //   console.log("formData: ", formData);
 
   try {
     const response = await fetch(`${BACKEND_ADDRESS}/events/upload`, {
@@ -520,7 +523,7 @@ async function uploadEvent(event) {
 }
 
 async function uploadAllEvents() {
-  for (const event of events) {
+  for (const event of [events[0]]) {
     await uploadEvent(event);
   }
 }

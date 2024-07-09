@@ -67,11 +67,14 @@ router.post("/upload", async (req, res) => {
         title,
         place,
         city,
-        chores,
+        // chores,
         thumbnailDescription,
         eventDate,
         price,
       } = req.body;
+
+      // Deserialize the chores array
+      const chores = JSON.parse(req.body.chores);
 
       const eventFields = {
         title,

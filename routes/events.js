@@ -15,6 +15,7 @@ router.post("/upload", async (req, res) => {
       "token",
       "title",
       "place",
+      "postalCode",
       "city",
       "chores",
       "thumbnailDescription",
@@ -66,8 +67,8 @@ router.post("/upload", async (req, res) => {
       const {
         title,
         place,
+        postalCode,
         city,
-        // chores,
         thumbnailDescription,
         eventDate,
         price,
@@ -79,6 +80,7 @@ router.post("/upload", async (req, res) => {
       const eventFields = {
         title,
         place,
+        postalCode,
         city,
         chores,
         thumbnailUrl: imageResult.secure_url,
@@ -158,6 +160,7 @@ router.get("/grouped", (req, res) => {
             _id: "$_id",
             title: "$title",
             place: "$place",
+            postalCode: "$postalCode",
             city: "$city",
             chores: "$chores",
             thumbnailUrl: "$thumbnailUrl",

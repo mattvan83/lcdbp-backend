@@ -12,6 +12,7 @@ var contactsRouter = require("./routes/contacts");
 var listeningsRouter = require("./routes/listenings");
 var pressReviewsRouter = require("./routes/pressReviews");
 var eventsRouter = require("./routes/events");
+var studiedWorksRouter = require("./routes/studiedWorks");
 
 // const swaggerUi = require("swagger-ui-express");
 // const swaggerFile = require("./swagger-output.json");
@@ -40,5 +41,6 @@ app.use("/contacts", contactsRouter);
 app.use("/listenings", listeningsRouter);
 app.use("/pressReviews", pressReviewsRouter);
 app.use("/events", eventsRouter);
+app.use("/studiedWorks", studiedWorksRouter);
 
 module.exports = app;

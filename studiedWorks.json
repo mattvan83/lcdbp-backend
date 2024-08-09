@@ -1,0 +1,3774 @@
+[
+  {
+    "title": "L'île Hélène",
+    "code": "A 002",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 002 - L'île Hélène.pdf",
+    "authorMusic": "Yvan Cassar",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Chiffon Rouge",
+    "code": "A 005a",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 005a - Le chiffon rouge.pdf",
+    "authorMusic": "Michel Fugain",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Le chiffon rouge baryton.mp3",
+          "recordingDescription": "Baryton"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Le chiffon rouge baryton prédominant.mp3",
+          "recordingDescription": "Baryton prédominant"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Le chiffon rouge tenor 1 prédominant.mp3",
+          "recordingDescription": "Ténor 1 prédominant"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Le chiffon rouge tenor 2 prédominant.mp3",
+          "recordingDescription": "Ténor 2 prédominant"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Le chiffon rouge - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Quand Un Soldat",
+    "code": "A 009",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 009 - Quand un soldat.pdf",
+    "authorMusic": "Francis Lemarque",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Les Lacs Du Connemara",
+    "code": "A 010",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 010 - Les lacs du Connemara.pdf",
+    "authorMusic": "Michel Sardou",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Les lacs du Connemara barytons.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Les lacs du connemara tenor 2 reference.mp3",
+          "recordingDescription": "Ténor 2 référence"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Chant Des Partisans",
+    "code": "A 014A",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 014A - Le chant des partisans.pdf",
+    "authorMusic": "Anna Marly",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Le chant des partisans - Baryton prédominant.mp3",
+          "recordingDescription": "Baryton prédominant"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Le chant des partisans - Basse prédominant.mp3",
+          "recordingDescription": "Basse prédominant"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Le chant des partisans - Ténor1 prédominant.mp3",
+          "recordingDescription": "Ténor 1 prédominant"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Le chant des partisans - Ténor2 prédominant.mp3",
+          "recordingDescription": "Ténor 2 prédominant"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Le chant des partisans - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Amazing Grace",
+    "code": "A 016",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 016 - Amazing grace .pdf",
+    "authorMusic": "William Walker",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Amazing grace - Baryton P.mp3",
+          "recordingDescription": "Baryton prédominant"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Amazing grace - Basse P.mp3",
+          "recordingDescription": "Basse prédominant"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Amazing grace - Ténor 1 P.mp3",
+          "recordingDescription": "Ténor 1 prédominant"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Amazing grace - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Amazing grace - Ténor 2 P.mp3",
+          "recordingDescription": "Ténor 2 prédominant"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Amazing Grace Conducteur Avec Orgue",
+    "code": "A 016",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 016 - Amazing grace conducteur avec orgue.pdf",
+    "authorMusic": "William Walker",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Amazing grace conducteur - Baryton avec orgue.mp3",
+          "recordingDescription": "Baryton avec orgue"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Amazing grace conducteur - Basse avec orgue.mp3",
+          "recordingDescription": "Basse avec orgue"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Amazing grace conducteur - Ténor 1 avec orgue.mp3",
+          "recordingDescription": "Ténor 1 avec orgue"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Amazing grace conducteur - Ténor 2 avec orgue.mp3",
+          "recordingDescription": "Ténor 2 avec orgue"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Amazing grace conducteur - Tutti avec orgue.mp3",
+          "recordingDescription": "Tutti avec orgue"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Tête En L'air",
+    "code": "A 025",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 025 - Tête en l'air.pdf",
+    "authorMusic": "Jacques Higelin",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Chant D'amour",
+    "code": "A 026",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 026 - Chant d'Amour.pdf",
+    "authorMusic": "Leos Janacek",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "T'as Pas T'as Pas Tout Dit",
+    "code": "A 027",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 027 - T'as pas t'as pas tout dit.pdf",
+    "authorMusic": "Bobby Lapointe",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/T'as pas tout dit, voix de basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "On Ira",
+    "code": "A 028",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 028 - On ira .pdf",
+    "authorMusic": "Tryss K. Soltani",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/On ira, voix de basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Loguivy De La Mer",
+    "code": "A 034",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 034 - Loguivy de la mer.pdf",
+    "authorMusic": "François Budet",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Loguivy de la mer - baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Loguivy de la mer - basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Loguivy de la mer - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Loguivy de la mer - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Loguivy de la mer - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Fanfare Du Printemps",
+    "code": "A 035",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 035 - La Fanfare du Printemps.pdf",
+    "authorMusic": "Jos. Bovet",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/la fanfare du printemps, voix de baryton reference avec piano.mp3",
+          "recordingDescription": "Baryton référence avec piano"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/la fanfare du printemps, voix de basse.mp3",
+          "recordingDescription": "Basse"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/la fanfare du printemps, voix de basse reference avec piano.mp3",
+          "recordingDescription": "Basse référence avec piano"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/la fanfare du printemps, voix de tenor 1 reference avec piano.mp3",
+          "recordingDescription": "Ténor 1 référence avec piano"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/la fanfare du printemps, voix de tenor 2 reference avec piano.mp3",
+          "recordingDescription": "Ténor 2 référence avec piano"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/la fanfare du printemps, quatre voix a cappella.mp3",
+          "recordingDescription": "Quatre voix a cappella"
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Prière",
+    "code": "A 036",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 036 - La prière - Brassens.pdf",
+    "authorMusic": "Georges Brassens",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Colporteur",
+    "code": "A 037",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 037 - Le colporteur.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Le colporteur - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Le colporteur baryton preponderant.mp3",
+          "recordingDescription": "Baryton prépondérant"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Le colporteur - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Le colporteur - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Le colporteur ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Le colporteur ténor 2 preponderant.mp3",
+          "recordingDescription": "Ténor 2 préponderant"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Le colporteur - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Les Corons",
+    "code": "A 038",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 038 - Les corons.pdf",
+    "authorMusic": "Pierre Bachelet",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Les corons - Baryton prédominant.mp3",
+          "recordingDescription": "Baryton prédominant"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Les corons - Basse prédominant.mp3",
+          "recordingDescription": "Basse prédominant"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Les Corons Ouh Ouh Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Les corons - Ténor1 prédominant.mp3",
+          "recordingDescription": "Ténor 1 prédominant"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Les corons - Ténor2 prédominant.mp3",
+          "recordingDescription": "Ténor 2 prédominant"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Les corons - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Conquête Du Bon Pays",
+    "code": "A 039",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 039 - Conquête du Bon Pays.pdf",
+    "authorMusic": "Vangelis",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Conquête du Bon Pays - Baryron.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Conquête du Bon Pays - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Conquête du Bon Pays - Ténor 1 & 2i.mp3",
+          "recordingDescription": "Ténor 1 & 2"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Conquête du Bon Pays - Ténor 1 & 2i.mp3",
+          "recordingDescription": "Ténor 1 & 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Conquête du Bon Pays - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Ils Sont Tombés",
+    "code": "A 040",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 040 - Ils sont tombés.pdf",
+    "authorMusic": "Georges Gavarentz",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/ils sont tombés - baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/ils sont tombés - basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Ils sont tombés - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Ils sont tombés - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Ils sont tombés - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Les Trois Cloches",
+    "code": "A 041",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 041 - Les trois cloches.pdf",
+    "authorMusic": "Jean Villard",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Les trois cloches - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Hymne À L'amour",
+    "code": "A 042",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 042 - Hymne à l'amour.pdf",
+    "authorMusic": "Marguerite Monnot",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Hymne à l'amour - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Hymne à l'amour - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Hymne à l'amour - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Hymne à l'amour - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Hymne à l'amour - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Quand Les Hommes Vivront D'amour",
+    "code": "A 043",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 043 - Quand les hommes vivront d'amour.pdf",
+    "authorMusic": "Raymond Levsque",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Quand les hommes vivront d'amour - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Temps De Vivre",
+    "code": "A 044",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 044 -  Le temps de vivre.pdf",
+    "authorMusic": "Georges Moustaki",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Le temps de vivre - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Dostoino Iest",
+    "code": "B 003",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 003 - Dostoino iest.pdf",
+    "authorMusic": "Dimitri Bortniansky",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Dostoino iest - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Dostoino_iest_baryton_preponderant_métronomique.mp3",
+          "recordingDescription": "Baryton prépondérant métronomique"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Dostoino iest - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Dostoino iest - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Dostoino_iest_tenor1_preponderant_métronomique.mp3",
+          "recordingDescription": "Ténor 1 préponderant métronomique"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Dostoino iest - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Dostoino iest - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Christus Vincit",
+    "code": "B 004",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 004 - Christus vincit.pdf",
+    "authorMusic": "C. Boller",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Christus vincit basses 2.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "A Ma Maison, My Home",
+    "code": "B 005",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 005 - A Ma Maison, My Home.pdf",
+    "authorMusic": "Raoul Mutin",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/A Ma Maison, My Home - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Hallelujah Leonard  Cohen",
+    "code": "B 006",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 006 - Hallelujah Leonard  Cohen - Choeur à 3 voix.pdf",
+    "authorMusic": "Leonard Cohen",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Marie",
+    "code": "B 007",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 007 - Marie.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Marie - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Marie - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Marie - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Marie - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Marie - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Tebe Poem",
+    "code": "B 008",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 008 - Tebe Poem.pdf",
+    "authorMusic": "Dimitri Bortniansky",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Tebe Poem - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Tebe Poem - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Tebe Poem - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Tebe Poem - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Tebe Poem - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Prière Des Frères Moraves",
+    "code": "B 009",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 009 - Prière des frères moraves - Fa majeur.pdf",
+    "authorMusic": "Anonyme",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Prière des frères moraves - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Prière des frères moraves - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Prière des frères moraves - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Prière des frères moraves - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Prière des frères moraves - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Sanctus",
+    "code": "B 010",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 010 - Sanctus - Friedlich Silcher.pdf",
+    "authorMusic": "Friedlich Silcher",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Sanctus Silcher baryton et piano reference.mp3",
+          "recordingDescription": "Baryton et piano référence"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Sanctus F; Silcher basse.mp3",
+          "recordingDescription": "Basse"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Sanctus Silcher basse et piano reference.mp3",
+          "recordingDescription": "Basse et piano réference"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Sanctus Silcher tenor 1 et piano reference.mp3",
+          "recordingDescription": "Ténor 1 et piano réference"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Sanctus Silche tenor 2 et piano reference.mp3",
+          "recordingDescription": "Ténor 2 et piano référence"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Sanctus Silcher tutti reference.mp3",
+          "recordingDescription": "Tutti référence"
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Gloire De Dieu",
+    "code": "B 011",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 011 - La gloire de Dieu.pdf",
+    "authorMusic": "Ludwig Van Beethoven",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/La gloire de Dieu, voix de basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Chant De Landsgemeinde D'appenzell",
+    "code": "B 012",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 012 - Chant de Landsgemeinde d'Appenzell.pdf",
+    "authorMusic": "J.H. Tobler",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Non Nobis Domine",
+    "code": "B 013",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 013 - Non nobis Domine.pdf",
+    "authorMusic": "Anonyme",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Praise",
+    "code": "B 014",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 014 - Praise (Karl Jenkins).pdf",
+    "authorMusic": "Karl Jenkins",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Ecce Quomodo Moritur Justus",
+    "code": "B 015",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 015 - Ecce quomodo moritur justus - Sol Majeur.pdf",
+    "authorMusic": "Jacob Gallus",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Ecce quomodo moritur justus - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Ecce quomodo moritur justus - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Ecce quomodo moritur justus - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Ecce quomodo moritur justus - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Ecce quomodo moritur justus - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Signore Delle Cime",
+    "code": "B 016",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 016 - Signore delle cime - Sol majeur.pdf",
+    "authorMusic": "Guiseppe De Marzi",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Signore del cime baryton et tutti.mp3",
+          "recordingDescription": "Baryton et tutti"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Signore del cime basse et tutti.mp3",
+          "recordingDescription": "Basse et tutti"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Signore del cime ténor 1 et tutti.mp3",
+          "recordingDescription": "Ténor 1 et tutti"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Signore del cime ténor 2 et tutti.mp3",
+          "recordingDescription": "Ténor 2 et tutti"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Mnogaïa Lieta",
+    "code": "B 017",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 017 - Mnogaïa Lieta.pdf",
+    "authorMusic": "Dimitry Bortnianski",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Mnogaia lieta voix de baryton..mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Mnogaia lieta voix de basse..mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Maria Lassù",
+    "code": "B 018",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 018 - Maria Lassù - Sol Majeur.pdf",
+    "authorMusic": "di Bepi de Marzi",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Maria Lassù - Sol Majeur - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Maria Lassù - Sol Majeur - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Maria Lassù - Sol Majeur - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Maria Lassù - Sol Majeur - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Maria Lassù - Sol Majeur - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Ave Maria Gounod",
+    "code": "B 019",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 019 - Ave Maria Gounod.pdf",
+    "authorMusic": "Ch. Gounod",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Ave Maria - Gounod - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Ave Maria - Gounod - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Ave Maria - Gounod - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Ave Maria - Gounod - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Ave Maria - Gounod - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Dona Nobis Pacem",
+    "code": "B 020",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 020 - Dona nobis pacem.pdf",
+    "authorMusic": "Wolfgang Amadeus Mozart",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Dona nobis pacem - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Dona nobis pacem - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Dona nobis pacem - Ténors 1 & 2.mp3",
+          "recordingDescription": "Ténor 1 & 2"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Dona nobis pacem - Ténors 1 & 2.mp3",
+          "recordingDescription": "Ténor 1 & 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Dona nobis pacem - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Cantique De Notre Dame Du Chêne",
+    "code": "B 021",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 021 - Cantique de Notre Dame du Chêne.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Cantique de Notre Dame du Chêne - Barytons & Basses.mp3",
+          "recordingDescription": "Baryton et basse"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Cantique de Notre Dame du Chêne - Barytons & Basses.mp3",
+          "recordingDescription": "Baryton et basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Cantique de Notre Dame du Chêne - Ténors 1 & 2.mp3",
+          "recordingDescription": "Ténor 1 & 2"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Cantique de Notre Dame du Chêne - Ténors 1 & 2.mp3",
+          "recordingDescription": "Ténor 1 & 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Cantique de Notre Dame du Chêne - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Chvalite Imja Gospodne",
+    "code": "B 022",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 022 - Chvalite imja gospodne.pdf",
+    "authorMusic": "",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Ave Verum Corpus",
+    "code": "B 023",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 023 - Ave Verum Corpus - Mozart - Piano.pdf",
+    "authorMusic": "Wolfgang Amadeus Mozart",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Ave Verum Corpus - Mozart - Orgue voix piano - Baryton.mp3",
+          "recordingDescription": "Baryton, orgue voix piano"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Ave Verum Corpus - Mozart - Orgue voix piano - Basse.mp3",
+          "recordingDescription": "Basse, orgue voix piano"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Ave Verum Corpus - Mozart - Orgue voix piano - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1, orgue voix piano"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Ave Verum Corpus - Mozart - Orgue voix piano - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2, orgue voix piano"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Ave Verum Corpus - Mozart - Orgue voix piano - Tutti.mp3",
+          "recordingDescription": "Tutti, orgue voix piano"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Ave Verum Corpus (a Cappella)",
+    "code": "B 024",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 024 - Ave Verum Corpus (A Cappella) - Mozart.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Ave verum corpus - Mozart - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Ave verum corpus - Mozart - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Ave verum corpus - Mozart - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Ave verum corpus - Mozart - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Chercher Avec Toi, Marie",
+    "code": "B 025",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/B_Religieux/B 025 - Chercher avec toi, Marie.pdf",
+    "authorMusic": "Jean-Claude Gianadda",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Choeur Des Chasseurs",
+    "code": "C 002",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 002 - Le Choeur des Chasseurs.pdf",
+    "authorMusic": "C. M. De Weber",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Choeur des chasseurs voix de basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Nuit D'été",
+    "code": "C 003",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 003 - Nuit d'été.pdf",
+    "authorMusic": "Wolfgang Amadeus Mozart",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Nuit d'été, basses.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Va Pensiero",
+    "code": "C 004",
+    "artwork": "Nabucco",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 004 - Va pensiero - 4 portées.pdf",
+    "authorMusic": "Guiseppe Verdi",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Va pensiero - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Va pensiero - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Va pensiero - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Va pensiero - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Va pensiero - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Choeur Des Soldats",
+    "code": "C 005",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 005 - Le choeur des soldats - la b majeur.pdf",
+    "authorMusic": "Charles Gounod",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Choeur des soldats de Gounod, basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Prière",
+    "code": "C 006",
+    "artwork": "Finlandia",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 006 - Prière (extrait de Finlandia).pdf",
+    "authorMusic": "Jean Sibelius",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Nous Chanterons À Pleine Voix 2 Voix",
+    "code": "C 007",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 007 - Nous chanterons à pleine voix 2 voix.pdf",
+    "authorMusic": "Franz Schubert",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Canon nous chanterons à pleine voix, basse, avec piano.mp3",
+          "recordingDescription": "Basse avec piano"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Hymne À La Nuit",
+    "code": "C 008",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 008 - Hymne à la nuit - Lab Majeur.pdf",
+    "authorMusic": "Jean-Philippe Rameau",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Hymne à la nuit baryton prépondérant.mp3",
+          "recordingDescription": "Baryton prépondérant"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Hymne à la nuit voix de basse.mp3",
+          "recordingDescription": "Basse"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Hymne à la nuit, basse prépondérante.mp3",
+          "recordingDescription": "Basse prépondérante"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Hymne à la nuit tenor un prépondérant.mp3",
+          "recordingDescription": "Ténor 1 prépondérante"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Hymne à la nuit ténor 2 prépondérant.mp3",
+          "recordingDescription": "Ténor 2 prépondérante"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Chant Des Bretons",
+    "code": "C 009",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 009 - Le chant des Bretons.pdf",
+    "authorMusic": "Hector Berlioz",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "O Welche Lust",
+    "code": "C 010",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 010 - O welche Lust - Beethoven.pdf",
+    "authorMusic": "Ludwig Van Beethoven",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/O welche Lust baryton avec un peu de basse.mp3",
+          "recordingDescription": "Baryton avec un peu de basse"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/L.v.Beethoven Fidelio Gefangenenchor O welche Lust for Bass1 to study Piano accompaniment.mp3",
+          "recordingDescription": "Baryton avec accompagnement piano"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/O welche Lust basse et piano.mp3",
+          "recordingDescription": "Basse"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/L.v.Beethoven Fidelio Gefangenenchor O welche Lust for Bass2 to study Piano accompaniment.mp3",
+          "recordingDescription": "Basse avec accompagnement piano"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/L.v.Beethoven Fidelio Gefangenenchor O welche Lust for Tenor 1 to study Piano accompaniment.mp3",
+          "recordingDescription": "Ténor 1 avec accompagnement piano"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/O welche Lust tenor 2 avec un peu de bar et de basse.mp3",
+          "recordingDescription": "Ténor 2 avec un peu de baryton et basse"
+        },
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/L.v.Beethoven Fidelio Gefangenenchor O welche Lust for Tenor 2 to study Piano accompaniment.mp3",
+          "recordingDescription": "Ténor 2 avec accompagnement piano"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/L.v.Beethoven Fidelio Gefangenenchor O welche Lust Piano accompaniment.mp3",
+          "recordingDescription": "Tutti avec accompagnement piano"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Des Pas Dans L'allée",
+    "code": "C 011",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 011 - Des pas dans l'allée.pdf",
+    "authorMusic": "Camille Saint-Saëns",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Des pas dans l'allée - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Des pas dans l'allée - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Des pas dans l'allée - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Des pas dans l'allée - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Des pas dans l'allée - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Agur Jaunak",
+    "code": "D 002",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 002 - Agur Jaunak.pdf",
+    "authorMusic": "Ignacio Mocoroa",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Agur Jaunak - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Agur Jaunak - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Agur Jaunak - Tenor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Agur Jaunak - Tenor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Agur Jaunak - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Bella Ciao",
+    "code": "D 003",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 003 - Bella ciao.pdf",
+    "authorMusic": "Anonyme XXème siècle",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Bella ciao - Barytons prédominants.mp3",
+          "recordingDescription": "Baryton prédominant"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Bella ciao - Basses prédominantes.mp3",
+          "recordingDescription": "Basse prédominante"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Bella ciao - Ténors prédominants.mp3",
+          "recordingDescription": "Ténors prédominants"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Bella ciao - Ténors prédominants.mp3",
+          "recordingDescription": "Ténors prédominants"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Bella ciao - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Terre Jurassienne",
+    "code": "D 004",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 004 - Terre jurassienne.pdf",
+    "authorMusic": "Paul Miche",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Terre jurassienne basse 1.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Terre jurassienne basse 2 mp3.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Terre jurassienne ténors 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Un Paysan S'en Va",
+    "code": "D 005",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 005 - Un paysan s'en va.pdf",
+    "authorMusic": "Marc Michel",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Un paysan s'en va, trois voix, baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Un paysan s'en va, à trois voix, basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Amis, Buvons Ą Pleins Verres",
+    "code": "D 007",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 007 - Amis, buvons ą pleins verres.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Amis, buvons à pleins verres - canon 4 voix.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Vieux Chalet",
+    "code": "D 008",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 008 - Le vieux chalet.pdf",
+    "authorMusic": "Joseph Bovet",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Le vieux chalet, baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Le vieux chalet, basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Le vieux chalet, ténor 1..mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Le vieux chalet, ténor 2..mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Tourdion Ttbb",
+    "code": "D 010A",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 010A - Tourdion TTBB.pdf",
+    "authorMusic": "Anonyme",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Tourdion, voix d'hommes, baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Tourdion, voix d'hommes, ténor.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Tourdion, voix d'hommes, ténor.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Tourdion - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Se Canto",
+    "code": "D 011",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 011 - Se canto .pdf",
+    "authorMusic": "",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "L'alpée",
+    "code": "D 012",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 012 - L'alpée.pdf",
+    "authorMusic": "Joseph Bovet",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Forêt Suisse",
+    "code": "D 013",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 013 - La forêt suisse.pdf",
+    "authorMusic": "Frederick Mendelssohn",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Le Joueur De Pipeau",
+    "code": "D 014",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 014 - Le joueur de pipeau.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Le joueur de pipeau - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Le joueur de pipeau - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Le joueur de pipeau - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Le joueur de pipeau - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Le joueur de pipeau - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Still Ruht Der See",
+    "code": "D 016",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 016 - Still ruht der See.pdf",
+    "authorMusic": "Heinrich Pfeil",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Ô Cher Jura",
+    "code": "D 017",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 017 - Ô cher Jura.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/O cher Jura baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/O cher Jura basses.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/O cher Jura ténors.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/O cher Jura ténors.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Ohé Marins",
+    "code": "D 018",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 018  - Ohé marins.pdf",
+    "authorMusic": "Dominique Moisan",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Prière Du Pātre",
+    "code": "D 019",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 019 - La pričre du pātre.pdf",
+    "authorMusic": "Joseph Bovet",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Château-Chalon",
+    "code": "D 020",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 020 - Chāteau-Chalon.pdf",
+    "authorMusic": "Emile Flattot",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Château-Chalon - Baryton & Basse prédominant.mp3",
+          "recordingDescription": "Baryton et basse prédominants"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Château-Chalon - Ténor 1&2 prédominant.mp3",
+          "recordingDescription": "Ténor 1 & 2 prédominants"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Château-Chalon - Ténor 1&2 prédominant.mp3",
+          "recordingDescription": "Ténor 1 & 2 prédominants"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Château-Chalon - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Quel Mazzolin Di Fiori (version Aggrandie)",
+    "code": "D 021",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 021 - Quel mazzolin di fiori (version aggrandie).pdf",
+    "authorMusic": "",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Quel Mazzolin Di Fiori",
+    "code": "D 021",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 021 - Quel mazzolin di fiori.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Quel mazolin di fiori - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Quel mazolin di fiori - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Quel mazolin di fiori - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Quel mazolin di fiori - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Quel mazolin di fiori - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Ce Pays, C'est Le Mien",
+    "code": "D 022",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 022 - Ce pays, c'est le mien - TTBB.pdf",
+    "authorMusic": "Jean-Luc Grenard",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Ce pays, c'est le mien - Baryton piano.mp3",
+          "recordingDescription": "Baryton piano"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Ce pays, c'est le mien - Basse piano.mp3",
+          "recordingDescription": "Basse piano"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Ce pays, c'est le mien - Ténor 1 piano.mp3",
+          "recordingDescription": "Ténor 1 piano"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Ce pays, c'est le mien - Ténor 2  piano.mp3",
+          "recordingDescription": "Ténor 2 piano"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Ce pays, c'est le mien - Tutti piano.mp3",
+          "recordingDescription": "Tutti piano"
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Marseillaise",
+    "code": "D 023",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 023 - La Marseillaise.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/La Marseillaise - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/La Marseillaise - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/La Marseillaise - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/La Marseillaise - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/La Marseillaise - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "O Petit Pays",
+    "code": "D 024",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 024 - O petit pays.pdf",
+    "authorMusic": "Carlo Hemmerling",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/O-petit-pays-Barytons.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/O-petit-pays-Basses.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/O-petit-pays-Ténors-1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/O-petit-pays-Ténors-2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/O-petit-pays-Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Chanson Du Fromager. Version Jurassienne",
+    "code": "D 025",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 025 - La chanson du fromager. Version jurassienne.pdf",
+    "authorMusic": "Jean Daetwyler",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Chanson Du Fromager",
+    "code": "D 025",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 025 - La chanson du fromager.pdf",
+    "authorMusic": "Jean Daetwyler",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/La chanson du fromager - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/La chanson du fromager - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/La chanson du fromager - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/La chanson du fromager - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/La chanson du fromager - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Les Montagnards",
+    "code": "D 026",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 026 - Les montagnards.pdf",
+    "authorMusic": "Alfred Roland",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Les Montagnards - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Les Montagnards - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Les Montagnards - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Les Montagnards - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Les Montagnards - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Fandango Salda",
+    "code": "D 027",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 027 - Fandango Salda.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Fandango salda - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Fandango salda - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Fandango salda - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Fandango salda - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Fandango salda - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Malbrough S'en Va T'en Guerre",
+    "code": "D 028",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 028 - Malbrough s'en va t'en guerre.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Malbrough s'en va t'en guerre - baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Malbrough s'en va t'en guerre - basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Malbrough s'en va t'en guerre - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Malbrough s'en va t'en guerre - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Malbrough s'en va t'en guerre - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Beau Jura",
+    "code": "D 029",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 029 - Beau Jura.pdf",
+    "authorMusic": "Maurice Perrenoud",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Beau Jura - Baryton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Beau Jura - Basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Beau Jura - Ténor 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Beau Jura - Ténor 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Beau Jura - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Bourgogne",
+    "code": "D 030",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 030 - La Bourgogne.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/La Bourgogne - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Ballade Nord-Irlandaise",
+    "code": "D 031",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 031 - La Ballade Nord-Irlandaise.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/La Ballade Nord-Irlandaise - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Haurtxo Ttipia",
+    "code": "D 032",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 032 - Haurtxo Ttipia.pdf",
+    "authorMusic": "G. Olaizola",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Haurtxo Ttipia - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Veux-tu, Compère Grégoire",
+    "code": "D 033",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 033 - Veux-tu, Compère Grégoire.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Veux-tu, Compère Grégoire - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Frère Jacques",
+    "code": "D 034",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 034 - Frère Jacques.pdf",
+    "authorMusic": "L. Raiter",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Frère Jacques.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Guantanamera",
+    "code": "D 035",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 035 - Guantanamera.pdf",
+    "authorMusic": "José Fernández",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Guantanamera - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "J'ai Du Bon Tabac",
+    "code": "D 036",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/D_Traditionnel/D 036 - J'ai du bon tabac.pdf",
+    "authorMusic": "Gabriel-Charles de Lattaignant",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/J'ai du bon tabac - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Douce Nuit (mixte)",
+    "code": "E 002a",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/E_Noel/E 002a - Douce nuit (Mixte).pdf",
+    "authorMusic": "Franz Gruber",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Señora Doña Maria Trois Voix",
+    "code": "E 006",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/E_Noel/E 006 - Señora doña Maria trois voix.pdf",
+    "authorMusic": "",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Petit Papa Noël",
+    "code": "E 007",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/E_Noel/E 007 - Petit papa Noël.pdf",
+    "authorMusic": "",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Petit papa Noël - Barytons.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Petit papa Noël - Basses.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Petit papa Noël - Ténors 1.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Petit papa Noël - Ténors 2.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Petit papa Noël - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Noêl Bressan",
+    "code": "E 008",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/E_Noel/E 008 - Noêl Bressan - Noié, Noié est venu.pdf",
+    "authorMusic": "Brossard de Montaney",
+    "isAtWork": false,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Noël Bressan - Noié, Noié est venu - Tutti.mp3",
+          "recordingDescription": "Tutti"
+        }
+      ]
+    }
+  }
+]

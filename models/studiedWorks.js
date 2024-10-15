@@ -4,11 +4,13 @@ const RecordingSchema = new mongoose.Schema({
   recordingUrl: {
     type: String,
     required: true,
+    default: "",
   },
   recordingDescription: {
     type: String,
     required: true,
     trim: true,
+    default: "",
   },
 });
 
@@ -47,7 +49,7 @@ const studiedWorkSchema = new mongoose.Schema(
     },
     authorMusic: {
       type: String,
-      required: false,
+      required: true,
       default: "",
     },
     isAtWork: {

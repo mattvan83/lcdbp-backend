@@ -40,6 +40,46 @@
     }
   },
   {
+    "title": "Un Prisonnier Oublié",
+    "code": "A 003",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 003 - Un prisonnier oublié.pdf",
+    "authorMusic": "Marie-Thérèse Robin",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Un prisonnier oublié bayton.mp3",
+          "recordingDescription": "Baryton"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Un prisonnier oublié basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor1/Un prisonnier oublié ténor.mp3",
+          "recordingDescription": "Ténor 1"
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tenor2/Un prisonnier oublié ténor.mp3",
+          "recordingDescription": "Ténor 2"
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
     "title": "Le Chiffon Rouge",
     "code": "A 005a",
     "artwork": "",
@@ -283,6 +323,86 @@
         {
           "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Tutti/Amazing grace conducteur - Tutti avec orgue.mp3",
           "recordingDescription": "Tutti avec orgue"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Canon De La Paix",
+    "code": "A 022",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 022 - Canon de la paix.pdf",
+    "authorMusic": "Francis Ferral",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/le canon de la paix voix de basse.mp3",
+          "recordingDescription": "Basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ]
+    }
+  },
+  {
+    "title": "Les Tourneuses D'obus",
+    "code": "A 023",
+    "artwork": "",
+    "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/A_Profanes/A 023 - Les tourneuses d'obus.pdf",
+    "authorMusic": "Vincent Scotto",
+    "isAtWork": true,
+    "workRecordings": {
+      "baryton": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Baryton/Les tourneuses d'obus barytons et basses.mp3",
+          "recordingDescription": "Baryton et basse"
+        }
+      ],
+      "bass": [
+        {
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Les tourneuses d'obus barytons et basses.mp3",
+          "recordingDescription": "Baryton et basse"
+        }
+      ],
+      "tenor1": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tenor2": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
+        }
+      ],
+      "tutti": [
+        {
+          "recordingUrl": "",
+          "recordingDescription": ""
         }
       ]
     }
@@ -1996,12 +2116,12 @@
     }
   },
   {
-    "title": "Prière",
+    "title": "Prière (extrait de Finlandia)",
     "code": "C 006",
     "artwork": "Finlandia",
     "partitionUrl": "/Users/matthieu/Code/Web/siteChorale/Partitions/C_Classique/C 006 - Prière (extrait de Finlandia).pdf",
     "authorMusic": "Jean Sibelius",
-    "isAtWork": false,
+    "isAtWork": true,
     "workRecordings": {
       "baryton": [
         {
@@ -2011,8 +2131,8 @@
       ],
       "bass": [
         {
-          "recordingUrl": "",
-          "recordingDescription": ""
+          "recordingUrl": "/Users/matthieu/Code/Web/siteChorale/EnregistrementsTravail/Bass/Finlandia, Basse.mp3",
+          "recordingDescription": "Basse"
         }
       ],
       "tenor1": [

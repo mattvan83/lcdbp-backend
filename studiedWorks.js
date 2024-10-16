@@ -155,6 +155,28 @@ const BACKEND_ADDRESS = "http://localhost:3000";
 
 const studiedWorks = require("./studiedWorks.json");
 
+/**
+ * Uploads studied work recordings and associated metadata to a backend server.
+ *
+ * This asynchronous function constructs a FormData object containing various audio recordings,
+ * their descriptions, and additional information about the studied work. It validates the existence
+ * of files before uploading and handles server responses, including error logging for any issues encountered.
+ *
+ * @param {Object} studiedWork - The studied work object containing details for upload.
+ * @param {string} studiedWork.title - The title of the studied work.
+ * @param {string} studiedWork.code - A unique code for the studied work.
+ * @param {string} studiedWork.partitionUrl - The file path for the partition file.
+ * @param {boolean} studiedWork.isAtWork - Indicates if the work is currently in progress.
+ * @param {Object} studiedWork.workRecordings - An object containing arrays of recordings for different voice types.
+ * @param {Array<Object>} studiedWork.workRecordings.baryton - Array of baryton recordings with URLs and descriptions.
+ * @param {Array<Object>} studiedWork.workRecordings.bass - Array of bass recordings with URLs and descriptions.
+ * @param {Array<Object>} studiedWork.workRecordings.tenor1 - Array of tenor1 recordings with URLs and descriptions.
+ * @param {Array<Object>} studiedWork.workRecordings.tenor2 - Array of tenor2 recordings with URLs and descriptions.
+ * @param {Array<Object>} studiedWork.workRecordings.tutti - Array of tutti recordings with URLs and descriptions.
+ * @param {Buffer|File} [studiedWork.artwork] - Optional artwork file associated with the studied work.
+ * @param {Buffer|File} [studiedWork.authorMusic] - Optional author music file associated with the studied work.
+ * @returns {Promise<void>} Returns a promise that resolves when the upload is complete or rejects on error.
+ */
 async function uploadStudiedWork(studiedWork) {
   // Dynamically import node-fetch
   const fetch = (await import("node-fetch")).default;

@@ -3,14 +3,12 @@ const mongoose = require("mongoose");
 const RecordingSchema = new mongoose.Schema({
   recordingUrl: {
     type: String,
-    required: true,
-    default: "",
+    required: false,
   },
   recordingDescription: {
     type: String,
-    required: true,
+    required: false,
     trim: true,
-    default: "",
   },
 });
 
@@ -37,7 +35,7 @@ const studiedWorkSchema = new mongoose.Schema(
     artwork: {
       type: String,
       required: false,
-      default: "",
+      trim: true,
     },
     partitionUrl: {
       type: String,
@@ -45,12 +43,12 @@ const studiedWorkSchema = new mongoose.Schema(
     },
     partitionThumbnailUrl: {
       type: String,
-      required: true,
+      required: false,
     },
     authorMusic: {
       type: String,
-      required: true,
-      default: "",
+      required: false,
+      trim: true,
     },
     isAtWork: {
       type: Boolean,

@@ -2721,6 +2721,11 @@ path-to-regexp@0.1.7:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==
 
+pdf2image@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/pdf2image/-/pdf2image-1.2.3.tgz#ff8851350f0f45ae1637e3d945436ff841b8e987"
+  integrity sha512-jBSu3Vt2TZsI+fdGRDtkezduzyvuzayy2HPAYVf1vX6tHLAl/HBcXRo4/lD/NDMoa+XsMo5ZeUYF86Lkc+CtLQ==
+
 picocolors@^1.0.0, picocolors@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.1.tgz#a8ad579b571952f0e5d25892de5445bcfe25aaa1"

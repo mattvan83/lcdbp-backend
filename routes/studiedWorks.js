@@ -3,6 +3,7 @@ var router = express.Router();
 const uniqid = require("uniqid");
 const cloudinary = require("cloudinary").v2;
 const fs = require("fs");
+const pdf2image = require("pdf2image");
 
 const User = require("../models/users");
 const StudiedWork = require("../models/studiedWorks");
@@ -78,6 +79,7 @@ router.post("/upload", async (req, res) => {
     }
 
     const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
+    const partitionThumbnailPath = `${tmpDir}/${uniqid()}.jpg`;
     const barytonRecordingPaths = [];
     const bassRecordingPaths = [];
     const tenor1RecordingPaths = [];
@@ -85,8 +87,23 @@ router.post("/upload", async (req, res) => {
     const tuttiRecordingPaths = [];
 
     try {
+      // Move partition file to a unique temp path
       await partitionFromFront.mv(partitionPath);
 
+      // Convert partition first page to thumbnail and save it to a unique temp path
+      const options = {
+        density: 100, // image resolution
+        quality: 100, // jpeg quality
+        outputFormat: "%s_page_%d",
+        outputType: "jpg",
+        pages: "1",
+      };
+
+      const images = await pdf2image.convertPDF(partitionPath, options);
+      const imagePath = images[0].path;
+      fs.renameSync(imagePath, partitionThumbnailPath);
+
+      // Move recording files to unique temp paths
       if (
         !Array.isArray(barytonRecordingsFromFront) &&
         barytonRecordingsFromFront
@@ -191,6 +208,15 @@ router.post("/upload", async (req, res) => {
         use_filename: true,
       });
 
+      const partitionThumbnailResult = await cloudinary.uploader.upload(
+        partitionThumbnailPath,
+        {
+          resource_type: "image",
+          folder: "lcdbp/studiedWorks/partitions",
+          use_filename: true,
+        }
+      );
+
       if (barytonRecordingPaths.length) {
         for (const barytonRecordingPath of barytonRecordingPaths) {
           const barytonRecordingResult = await cloudinary.uploader.upload(
@@ -262,6 +288,7 @@ router.post("/upload", async (req, res) => {
       }
 
       fs.unlinkSync(partitionPath);
+      fs.unlinkSync(partitionThumbnailPath);
       if (barytonRecordingPaths.length) {
         for (const barytonRecordingPath of barytonRecordingPaths) {
           fs.unlinkSync(barytonRecordingPath);
@@ -305,6 +332,7 @@ router.post("/upload", async (req, res) => {
         title,
         code,
         partitionUrl: partitionResult.secure_url,
+        partitionThumbnailUrl: partitionThumbnailResult.secure_url,
         isAtWork,
         workRecordings: {},
       };
@@ -395,6 +423,9 @@ router.post("/upload", async (req, res) => {
     } catch (err) {
       if (fs.existsSync(partitionPath)) {
         fs.unlinkSync(partitionPath);
+      }
+      if (fs.existsSync(partitionThumbnailPath)) {
+        fs.unlinkSync(partitionThumbnailPath);
       }
       if (barytonRecordingPaths.length) {
         for (const barytonRecordingPath of barytonRecordingPaths) {

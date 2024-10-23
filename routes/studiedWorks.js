@@ -475,7 +475,7 @@ router.post("/upload", async (req, res) => {
   }
 });
 
-// Get all events grouped by year in descending order
+// Get all partitions grouped by category in ascending order
 router.get("/groupedPartitions", async (req, res) => {
   if (!checkBody(req.body, ["token"])) {
     res.json({ result: false, error: "Missing or empty fields" });
@@ -534,6 +534,100 @@ router.get("/groupedPartitions", async (req, res) => {
         res.json({ result: true, categories, partitionsGrouped });
       } else {
         res.json({ result: false, error: "Partitions not found" });
+      }
+    });
+  } else {
+    res.json({
+      result: false,
+      error: "Membre non identifié en base de données",
+    });
+  }
+});
+
+// Get all work recordings grouped by voice in ascending order (title, recordingDescription)
+router.get("/groupedWorkRecordings", async (req, res) => {
+  if (!checkBody(req.body, ["token"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+  });
+
+  if (userFound) {
+    StudiedWork.aggregate([
+      {
+        $addFields: {
+          workRecordingsArray: { $objectToArray: "$workRecordings" },
+        },
+      },
+      {
+        $addFields: {
+          workRecordingsArray: {
+            $filter: {
+              input: "$workRecordingsArray",
+              cond: {
+                $and: [{ $ne: ["$$this.k", "_id"] }, { $ne: ["$$this.v", []] }],
+              },
+            },
+          },
+        },
+      },
+      {
+        $unwind: {
+          path: "$workRecordingsArray",
+          preserveNullAndEmptyArrays: false,
+        },
+      },
+      {
+        $unwind: {
+          path: "$workRecordingsArray.v",
+          preserveNullAndEmptyArrays: false,
+        },
+      },
+      {
+        $addFields: {
+          "workRecordingsArray.v.title": "$title",
+          "workRecordingsArray.v.artwork": "$artwork",
+          "workRecordingsArray.v.partitionUrl": "$partitionUrl",
+          "workRecordingsArray.v.partitionThumbnailUrl":
+            "$partitionThumbnailUrl",
+          "workRecordingsArray.v.authorMusic": "$authorMusic",
+          "workRecordingsArray.v.createdAt": "$createdAt",
+          "workRecordingsArray.v.updatedAt": "$updatedAt",
+        },
+      },
+      {
+        $group: {
+          _id: "$workRecordingsArray.k",
+          workRecordings: {
+            $push: "$workRecordingsArray.v",
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          voice: "$_id",
+          workRecordings: {
+            $sortArray: {
+              input: "$workRecordings",
+              sortBy: { title: 1, recordingDescription: 1 },
+            },
+          },
+        },
+      },
+      {
+        $sort: { voice: 1 },
+      },
+    ]).then((workRecordingsGrouped) => {
+      if (workRecordingsGrouped.length) {
+        const voices = workRecordingsGrouped.map((item) => item.voice);
+
+        res.json({ result: true, voices, workRecordingsGrouped });
+      } else {
+        res.json({ result: false, error: "Work recordings not found" });
       }
     });
   } else {

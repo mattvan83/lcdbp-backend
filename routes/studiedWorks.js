@@ -475,4 +475,73 @@ router.post("/upload", async (req, res) => {
   }
 });
 
+// Get all events grouped by year in descending order
+router.get("/groupedPartitions", async (req, res) => {
+  if (!checkBody(req.body, ["token"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+  });
+
+  if (userFound) {
+    StudiedWork.aggregate([
+      {
+        $addFields: {
+          category: { $substr: ["$code", 0, 1] },
+        },
+      },
+      {
+        $group: {
+          _id: "$category",
+          partitions: {
+            $push: {
+              _id: "$_id",
+              code: "$code",
+              title: "$title",
+              artwork: "$artwork",
+              partitionUrl: "$partitionUrl",
+              partitionThumbnailUrl: "$partitionThumbnailUrl",
+              authorMusic: "$authorMusic",
+              isAtWork: "$isAtWork",
+              createdAt: "$createdAt",
+              updatedAt: "$updatedAt",
+            },
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          category: "$_id",
+          partitions: {
+            $sortArray: {
+              input: "$partitions",
+              sortBy: { code: 1, title: 1 },
+            },
+          },
+        },
+      },
+      {
+        $sort: { category: 1 },
+      },
+    ]).then((partitionsGrouped) => {
+      if (partitionsGrouped.length) {
+        const categories = partitionsGrouped.map((item) => item.category);
+
+        res.json({ result: true, categories, partitionsGrouped });
+      } else {
+        res.json({ result: false, error: "Partitions not found" });
+      }
+    });
+  } else {
+    res.json({
+      result: false,
+      error: "Membre non identifié en base de données",
+    });
+  }
+});
+
 module.exports = router;

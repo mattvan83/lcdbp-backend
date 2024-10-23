@@ -79,7 +79,7 @@ router.post("/upload", async (req, res) => {
     }
 
     const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
-    const partitionThumbnailPath = `${tmpDir}/${uniqid()}.jpg`;
+    const partitionThumbnailPath = `${tmpDir}/${uniqid()}.png`;
     const barytonRecordingPaths = [];
     const bassRecordingPaths = [];
     const tenor1RecordingPaths = [];
@@ -92,10 +92,10 @@ router.post("/upload", async (req, res) => {
 
       // Convert partition first page to thumbnail and save it to a unique temp path
       const options = {
-        density: 100, // image resolution
-        quality: 100, // jpeg quality
+        density: 300, // image resolution
+        // quality: 200, // jpeg quality
         outputFormat: "%s_page_%d",
-        outputType: "jpg",
+        outputType: "png",
         pages: "1",
       };
 

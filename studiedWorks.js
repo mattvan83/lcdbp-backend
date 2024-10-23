@@ -154,6 +154,8 @@ const BACKEND_ADDRESS = "http://localhost:3000";
 // 4. Upload the studiedWorks collection on DB
 
 const studiedWorks = require("./studiedWorks.json");
+// studiedWorks = studiedWorks.slice(0, 1);
+// console.log(JSON.stringify(studiedWorks, null, 2));
 
 /**
  * Uploads studied work recordings and associated metadata to a backend server.
@@ -321,7 +323,7 @@ async function uploadStudiedWork(studiedWork) {
   formData.append("title", studiedWork.title);
   formData.append("code", studiedWork.code);
   formData.append("partitionFromFront", fs.createReadStream(partitionFilePath));
-  formData.append("isAtWork", studiedWork.isAtWork);
+  formData.append("isAtWork", studiedWork.isAtWork.toString());
 
   if (studiedWork.isAtWork) {
     barytonDescriptions.forEach((description) => {

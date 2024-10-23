@@ -23,6 +23,7 @@
     "morgan": "~1.9.1",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.13",
+    "pdf2image": "^1.2.3",
     "uid2": "^1.0.0",
     "uniqid": "^5.4.0"
   },

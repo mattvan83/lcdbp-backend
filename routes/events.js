@@ -95,7 +95,9 @@ router.post("/upload", async (req, res) => {
         res.json({ result: true, newEvent: newEventDB });
       });
     } catch (err) {
-      fs.unlinkSync(thumbnailPath);
+      if (fs.existsSync(thumbnailPath)) {
+        fs.unlinkSync(thumbnailPath);
+      }
       res.json({
         result: false,
         error: "Error uploading to Cloudinary: " + err.message,

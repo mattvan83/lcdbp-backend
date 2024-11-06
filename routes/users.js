@@ -111,6 +111,7 @@ router.post("/signup", (req, res) => {
                 result: true,
                 token: newUser.token,
                 username: newUser.username,
+                firstname: newUser.firstname,
               });
             });
           } else {
@@ -154,19 +155,18 @@ router.post("/signin", (req, res) => {
           result: false,
           error: `L'utilisateur ${username} n'a pas été trouvé`,
         });
+      } else if (
+        userByUsername &&
+        bcrypt.compareSync(password, userByUsername.password)
+      ) {
+        res.json({
+          result: true,
+          token: userByUsername.token,
+          username: userByUsername.username,
+          firstname: userByUsername.firstname,
+        });
       } else {
-        if (
-          userByUsername &&
-          bcrypt.compareSync(password, userByUsername.password)
-        ) {
-          res.json({
-            result: true,
-            token: userByUsername.token,
-            username: userByUsername.username,
-          });
-        } else {
-          res.json({ result: false, error: "Mauvais mot de passe" });
-        }
+        res.json({ result: false, error: "Mauvais mot de passe" });
       }
     }
   );

@@ -112,6 +112,7 @@ router.post("/signup", (req, res) => {
                 token: newUser.token,
                 username: newUser.username,
                 firstname: newUser.firstname,
+                type: newUser.type,
               });
             });
           } else {
@@ -164,6 +165,7 @@ router.post("/signin", (req, res) => {
           token: userByUsername.token,
           username: userByUsername.username,
           firstname: userByUsername.firstname,
+          type: userByUsername.type,
         });
       } else {
         res.json({ result: false, error: "Mauvais mot de passe" });

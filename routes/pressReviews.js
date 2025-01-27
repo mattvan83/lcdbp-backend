@@ -101,6 +101,66 @@ router.post("/upload", async (req, res) => {
   }
 });
 
+router.post("/uploadThumbnail", async (req, res) => {
+  if (
+    !checkBody(req.body, ["token", "imageExtension"]) ||
+    !checkBody(req.files, ["thumbnailFromFront"])
+  ) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+    type: "admin",
+  });
+
+  if (userFound) {
+    const { thumbnailFromFront } = req.files;
+
+    const { imageExtension } = req.body;
+
+    const tmpDir = "./tmp";
+    if (!fs.existsSync(tmpDir)) {
+      fs.mkdirSync(tmpDir);
+    }
+
+    const thumbnailPath = `${tmpDir}/${uniqid()}${imageExtension}`;
+
+    try {
+      await thumbnailFromFront.mv(thumbnailPath);
+    } catch (err) {
+      res.json({ result: false, error: "Error moving files: " + err.message });
+      return;
+    }
+
+    try {
+      const imageResult = await cloudinary.uploader.upload(thumbnailPath, {
+        resource_type: "image",
+        folder: "lcdbp/pressReviews/images",
+        use_filename: true,
+      });
+
+      fs.unlinkSync(thumbnailPath);
+
+      res.json({ result: true, thumbnailUrl: imageResult.secure_url });
+    } catch (err) {
+      if (fs.existsSync(thumbnailPath)) {
+        fs.unlinkSync(thumbnailPath);
+      }
+      res.json({
+        result: false,
+        error: "Error uploading to Cloudinary: " + err.message,
+      });
+    }
+  } else {
+    res.json({
+      result: false,
+      error: "Administrateur non identifié en base de données",
+    });
+  }
+});
+
 // Get all press reviews in list
 router.get("/list", (req, res) => {
   PressReview.find().then((pressReviews) => {

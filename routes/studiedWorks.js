@@ -999,6 +999,68 @@ router.post("/uploadPartitionThumbnail", async (req, res) => {
   }
 });
 
+router.post("/uploadRecording", async (req, res) => {
+  if (
+    !checkBody(req.body, ["token", "recordingExtension"]) ||
+    !checkBody(req.files, ["recordingFromFront"])
+  ) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+    type: "admin",
+  });
+
+  if (!userFound) {
+    res.json({
+      result: false,
+      error: "Administrateur non identifié en base de données",
+    });
+    return;
+  }
+
+  const { recordingFromFront } = req.files;
+  const { recordingExtension } = req.body;
+
+  const tmpDir = "./tmp";
+  if (!fs.existsSync(tmpDir)) {
+    fs.mkdirSync(tmpDir);
+  }
+
+  const recordingPath = `${tmpDir}/${uniqid()}${recordingExtension}`;
+
+  try {
+    // Move recording file to a unique temp path
+    await recordingFromFront.mv(recordingPath);
+  } catch (err) {
+    res.json({ result: false, error: "Error moving files: " + err.message });
+    return;
+  }
+
+  try {
+    const recordingResult = await cloudinary.uploader.upload(recordingPath, {
+      resource_type: "video",
+      folder: "lcdbp/works/audio",
+      use_filename: true,
+    });
+
+    fs.unlinkSync(recordingPath);
+
+    res.json({ result: true, recordingUrl: recordingResult.secure_url });
+  } catch (err) {
+    if (fs.existsSync(recordingPath)) {
+      fs.unlinkSync(recordingPath);
+    }
+
+    res.json({
+      result: false,
+      error: "Error uploading to Cloudinary: " + err.message,
+    });
+  }
+});
+
 // Get all partitions grouped by category in ascending order
 router.get("/groupedPartitions", async (req, res) => {
   // if (!checkBody(req.body, ["token"])) {

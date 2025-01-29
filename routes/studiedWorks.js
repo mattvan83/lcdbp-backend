@@ -843,6 +843,162 @@ router.post("/uploadWorks", async (req, res) => {
     });
   }
 });
+
+router.post("/uploadPartition", async (req, res) => {
+  if (
+    !checkBody(req.body, ["token"]) ||
+    !checkBody(req.files, ["partitionFromFront"])
+  ) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+    type: "admin",
+  });
+
+  if (!userFound) {
+    res.json({
+      result: false,
+      error: "Administrateur non identifié en base de données",
+    });
+    return;
+  }
+
+  const { partitionFromFront } = req.files;
+
+  const tmpDir = "./tmp";
+  if (!fs.existsSync(tmpDir)) {
+    fs.mkdirSync(tmpDir);
+  }
+
+  const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
+
+  try {
+    // Move partition file to a unique temp path
+    await partitionFromFront.mv(partitionPath);
+  } catch (err) {
+    res.json({ result: false, error: "Error moving files: " + err.message });
+    return;
+  }
+
+  try {
+    const partitionResult = await cloudinary.uploader.upload(partitionPath, {
+      resource_type: "raw",
+      folder: "lcdbp/works/partitions",
+      use_filename: true,
+    });
+
+    fs.unlinkSync(partitionPath);
+
+    res.json({ result: true, partitionUrl: partitionResult.secure_url });
+  } catch (err) {
+    if (fs.existsSync(partitionPath)) {
+      fs.unlinkSync(partitionPath);
+    }
+
+    res.json({
+      result: false,
+      error: "Error uploading to Cloudinary: " + err.message,
+    });
+  }
+});
+
+router.post("/uploadPartitionThumbnail", async (req, res) => {
+  if (
+    !checkBody(req.body, ["token"]) ||
+    !checkBody(req.files, ["partitionFromFront"])
+  ) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+    type: "admin",
+  });
+
+  if (!userFound) {
+    res.json({
+      result: false,
+      error: "Administrateur non identifié en base de données",
+    });
+    return;
+  }
+
+  const { partitionFromFront } = req.files;
+
+  const tmpDir = "./tmp";
+  if (!fs.existsSync(tmpDir)) {
+    fs.mkdirSync(tmpDir);
+  }
+
+  const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
+  const partitionThumbnailPath = `${tmpDir}/${uniqid()}.png`;
+
+  try {
+    // Move partition file to a unique temp path
+    await partitionFromFront.mv(partitionPath);
+  } catch (err) {
+    res.json({ result: false, error: "Error moving files: " + err.message });
+    return;
+  }
+
+  try {
+    // Convert partition first page to thumbnail and save it to a unique temp path
+    const options = {
+      density: 300, // image resolution
+      // quality: 200, // jpeg quality
+      outputFormat: "%s_page_%d",
+      outputType: "png",
+      pages: "1",
+    };
+
+    const images = await pdf2image.convertPDF(partitionPath, options);
+    const imagePath = images[0].path;
+    fs.renameSync(imagePath, partitionThumbnailPath);
+  } catch (err) {
+    res.json({
+      result: false,
+      error:
+        "Error converting first page of .pdf partition to .png: " + err.message,
+    });
+    return;
+  }
+
+  try {
+    const partitionThumbnailResult = await cloudinary.uploader.upload(
+      partitionThumbnailPath,
+      {
+        resource_type: "image",
+        folder: "lcdbp/works/partitions",
+        use_filename: true,
+      }
+    );
+
+    fs.unlinkSync(partitionPath);
+    fs.unlinkSync(partitionThumbnailPath);
+
+    res.json({
+      result: true,
+      partitionThumbnailUrl: partitionThumbnailResult.secure_url,
+    });
+  } catch (err) {
+    if (fs.existsSync(partitionPath)) {
+      fs.unlinkSync(partitionPath);
+    }
+    if (fs.existsSync(partitionThumbnailPath)) {
+      fs.unlinkSync(partitionThumbnailPath);
+    }
+
+    res.json({
+      result: false,
+      error: "Error uploading to Cloudinary: " + err.message,
+    });
+  }
+});
+
 // Get all partitions grouped by category in ascending order
 router.get("/groupedPartitions", async (req, res) => {
   // if (!checkBody(req.body, ["token"])) {

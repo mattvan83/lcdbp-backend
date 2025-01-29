@@ -7,6 +7,8 @@ const pdf2image = require("pdf2image");
 
 const User = require("../models/users");
 const StudiedWork = require("../models/studiedWorks");
+const Work = require("../models/works");
+const Recording = require("../models/recordings");
 const { checkBody, checkWorkRecording } = require("../modules/checkBody");
 
 const asyncArrayMethod = async (array) => {
@@ -475,6 +477,372 @@ router.post("/upload", async (req, res) => {
   }
 });
 
+router.post("/uploadWorks", async (req, res) => {
+  if (
+    !checkBody(req.body, ["token", "title", "code", "isAtWork"]) ||
+    !checkBody(req.files, ["partitionFromFront"])
+  ) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  if (
+    !checkWorkRecording(
+      req.files.barytonRecordingsFromFront,
+      req.body.barytonRecordingDescriptions
+    ) ||
+    !checkWorkRecording(
+      req.files.bassRecordingsFromFront,
+      req.body.bassRecordingDescriptions
+    ) ||
+    !checkWorkRecording(
+      req.files.tenor1RecordingsFromFront,
+      req.body.tenor1RecordingDescriptions
+    ) ||
+    !checkWorkRecording(
+      req.files.tenor2RecordingsFromFront,
+      req.body.tenor2RecordingDescriptions
+    ) ||
+    !checkWorkRecording(
+      req.files.tuttiRecordingsFromFront,
+      req.body.tuttiRecordingDescriptions
+    )
+  ) {
+    res.json({
+      result: false,
+      error:
+        "Non-matching between voice work recording files and its associated descriptions",
+    });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+    type: "admin",
+  });
+
+  if (!userFound) {
+    res.json({
+      result: false,
+      error: "Administrateur non identifié en base de données",
+    });
+    return;
+  }
+
+  const {
+    partitionFromFront,
+    barytonRecordingsFromFront,
+    bassRecordingsFromFront,
+    tenor1RecordingsFromFront,
+    tenor2RecordingsFromFront,
+    tuttiRecordingsFromFront,
+  } = req.files;
+
+  const tmpDir = "./tmp";
+  if (!fs.existsSync(tmpDir)) {
+    fs.mkdirSync(tmpDir);
+  }
+
+  const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
+  const partitionThumbnailPath = `${tmpDir}/${uniqid()}.png`;
+  const barytonRecordingPaths = [];
+  const bassRecordingPaths = [];
+  const tenor1RecordingPaths = [];
+  const tenor2RecordingPaths = [];
+  const tuttiRecordingPaths = [];
+
+  try {
+    // Move partition file to a unique temp path
+    await partitionFromFront.mv(partitionPath);
+
+    // Convert partition first page to thumbnail and save it to a unique temp path
+    const options = {
+      density: 300, // image resolution
+      // quality: 200, // jpeg quality
+      outputFormat: "%s_page_%d",
+      outputType: "png",
+      pages: "1",
+    };
+
+    const images = await pdf2image.convertPDF(partitionPath, options);
+    const imagePath = images[0].path;
+    fs.renameSync(imagePath, partitionThumbnailPath);
+
+    // Move recording files to unique temp paths
+    if (
+      !Array.isArray(barytonRecordingsFromFront) &&
+      barytonRecordingsFromFront
+    ) {
+      const barytonRecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+      await barytonRecordingsFromFront.mv(barytonRecordingPath);
+      barytonRecordingPaths.push(barytonRecordingPath);
+    } else if (
+      Array.isArray(barytonRecordingsFromFront) &&
+      barytonRecordingsFromFront.length
+    ) {
+      for (const barytonRecording of barytonRecordingsFromFront) {
+        const barytonRecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+        await barytonRecording.mv(barytonRecordingPath);
+        barytonRecordingPaths.push(barytonRecordingPath);
+      }
+    }
+
+    if (!Array.isArray(bassRecordingsFromFront) && bassRecordingsFromFront) {
+      const bassRecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+      await bassRecordingsFromFront.mv(bassRecordingPath);
+      bassRecordingPaths.push(bassRecordingPath);
+    } else if (
+      Array.isArray(bassRecordingsFromFront) &&
+      bassRecordingsFromFront.length
+    ) {
+      for (const bassRecording of bassRecordingsFromFront) {
+        const bassRecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+        await bassRecording.mv(bassRecordingPath);
+        bassRecordingPaths.push(bassRecordingPath);
+      }
+    }
+
+    if (
+      !Array.isArray(tenor1RecordingsFromFront) &&
+      tenor1RecordingsFromFront
+    ) {
+      const tenor1RecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+      await tenor1RecordingsFromFront.mv(tenor1RecordingPath);
+      tenor1RecordingPaths.push(tenor1RecordingPath);
+    } else if (
+      Array.isArray(tenor1RecordingsFromFront) &&
+      tenor1RecordingsFromFront.length
+    ) {
+      for (const tenor1Recording of tenor1RecordingsFromFront) {
+        const tenor1RecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+        await tenor1Recording.mv(tenor1RecordingPath);
+        tenor1RecordingPaths.push(tenor1RecordingPath);
+      }
+    }
+
+    if (
+      !Array.isArray(tenor2RecordingsFromFront) &&
+      tenor2RecordingsFromFront
+    ) {
+      const tenor2RecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+      await tenor2RecordingsFromFront.mv(tenor2RecordingPath);
+      tenor2RecordingPaths.push(tenor2RecordingPath);
+    } else if (
+      Array.isArray(tenor2RecordingsFromFront) &&
+      tenor2RecordingsFromFront.length
+    ) {
+      for (const tenor2Recording of tenor2RecordingsFromFront) {
+        const tenor2RecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+        await tenor2Recording.mv(tenor2RecordingPath);
+        tenor2RecordingPaths.push(tenor2RecordingPath);
+      }
+    }
+
+    if (!Array.isArray(tuttiRecordingsFromFront) && tuttiRecordingsFromFront) {
+      const tuttiRecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+      await tuttiRecordingsFromFront.mv(tuttiRecordingPath);
+      tuttiRecordingPaths.push(tuttiRecordingPath);
+    } else if (
+      Array.isArray(tuttiRecordingsFromFront) &&
+      tuttiRecordingsFromFront.length
+    ) {
+      for (const tuttiRecording of tuttiRecordingsFromFront) {
+        const tuttiRecordingPath = `${tmpDir}/${uniqid()}.mp3`;
+        await tuttiRecording.mv(tuttiRecordingPath);
+        tuttiRecordingPaths.push(tuttiRecordingPath);
+      }
+    }
+  } catch (err) {
+    res.json({ result: false, error: "Error moving files: " + err.message });
+    return;
+  }
+
+  try {
+    const partitionResult = await cloudinary.uploader.upload(partitionPath, {
+      resource_type: "raw",
+      folder: "lcdbp/works/partitions",
+      use_filename: true,
+    });
+
+    const partitionThumbnailResult = await cloudinary.uploader.upload(
+      partitionThumbnailPath,
+      {
+        resource_type: "image",
+        folder: "lcdbp/works/partitions",
+        use_filename: true,
+      }
+    );
+
+    // Create the Work document first
+    const workFields = {
+      title: req.body.title,
+      code: req.body.code,
+      partitionUrl: partitionResult.secure_url,
+      partitionThumbnailUrl: partitionThumbnailResult.secure_url,
+      isAtWork: req.body.isAtWork,
+    };
+
+    if (req.body.artwork) {
+      workFields.artwork = req.body.artwork;
+    }
+
+    if (req.body.authorMusic) {
+      workFields.authorMusic = req.body.authorMusic;
+    }
+
+    const newWork = new Work(workFields);
+    const savedWork = await newWork.save();
+
+    // Function to handle recording uploads for each voice type
+    const createRecordings = async (
+      recordingPaths,
+      recordingDescriptions,
+      voiceType
+    ) => {
+      const recordings = [];
+      for (let i = 0; i < recordingPaths.length; i++) {
+        const recordingResult = await cloudinary.uploader.upload(
+          recordingPaths[i],
+          {
+            resource_type: "video",
+            folder: "lcdbp/works/audio",
+            use_filename: true,
+          }
+        );
+
+        const recording = new Recording({
+          recordingUrl: recordingResult.secure_url,
+          recordingDescription:
+            recordingPaths.length === 1
+              ? recordingDescriptions
+              : recordingDescriptions[i],
+          voiceType,
+          workId: savedWork._id,
+        });
+
+        recordings.push(await recording.save());
+      }
+      return recordings;
+    };
+
+    // Create recordings for each voice type
+    const recordingsPromises = [
+      barytonRecordingPaths.length &&
+        createRecordings(
+          barytonRecordingPaths,
+          req.body.barytonRecordingDescriptions,
+          "BARYTON"
+        ),
+      bassRecordingPaths.length &&
+        createRecordings(
+          bassRecordingPaths,
+          req.body.bassRecordingDescriptions,
+          "BASS"
+        ),
+      tenor1RecordingPaths.length &&
+        createRecordings(
+          tenor1RecordingPaths,
+          req.body.tenor1RecordingDescriptions,
+          "TENOR1"
+        ),
+      tenor2RecordingPaths.length &&
+        createRecordings(
+          tenor2RecordingPaths,
+          req.body.tenor2RecordingDescriptions,
+          "TENOR2"
+        ),
+      tuttiRecordingPaths.length &&
+        createRecordings(
+          tuttiRecordingPaths,
+          req.body.tuttiRecordingDescriptions,
+          "TUTTI"
+        ),
+    ].filter(Boolean);
+
+    await Promise.all(recordingsPromises);
+
+    fs.unlinkSync(partitionPath);
+    fs.unlinkSync(partitionThumbnailPath);
+    if (barytonRecordingPaths.length) {
+      for (const barytonRecordingPath of barytonRecordingPaths) {
+        fs.unlinkSync(barytonRecordingPath);
+      }
+    }
+    if (bassRecordingPaths.length) {
+      for (const bassRecordingPath of bassRecordingPaths) {
+        fs.unlinkSync(bassRecordingPath);
+      }
+    }
+    if (tenor1RecordingPaths.length) {
+      for (const tenor1RecordingPath of tenor1RecordingPaths) {
+        fs.unlinkSync(tenor1RecordingPath);
+      }
+    }
+    if (tenor2RecordingPaths.length) {
+      for (const tenor2RecordingPath of tenor2RecordingPaths) {
+        fs.unlinkSync(tenor2RecordingPath);
+      }
+    }
+    if (tuttiRecordingPaths.length) {
+      for (const tuttiRecordingPath of tuttiRecordingPaths) {
+        fs.unlinkSync(tuttiRecordingPath);
+      }
+    }
+
+    // Fetch the work with its recordings
+    const workWithRecordings = await Work.findById(savedWork._id).populate(
+      "recordings"
+    );
+
+    res.json({ result: true, newWork: workWithRecordings });
+  } catch (err) {
+    if (fs.existsSync(partitionPath)) {
+      fs.unlinkSync(partitionPath);
+    }
+    if (fs.existsSync(partitionThumbnailPath)) {
+      fs.unlinkSync(partitionThumbnailPath);
+    }
+    if (barytonRecordingPaths.length) {
+      for (const barytonRecordingPath of barytonRecordingPaths) {
+        if (fs.existsSync(barytonRecordingPath)) {
+          fs.unlinkSync(barytonRecordingPath);
+        }
+      }
+    }
+    if (bassRecordingPaths.length) {
+      for (const bassRecordingPath of bassRecordingPaths) {
+        if (fs.existsSync(bassRecordingPath)) {
+          fs.unlinkSync(bassRecordingPath);
+        }
+      }
+    }
+    if (tenor1RecordingPaths.length) {
+      for (const tenor1RecordingPath of tenor1RecordingPaths) {
+        if (fs.existsSync(tenor1RecordingPath)) {
+          fs.unlinkSync(tenor1RecordingPath);
+        }
+      }
+    }
+    if (tenor2RecordingPaths.length) {
+      for (const tenor2RecordingPath of tenor2RecordingPaths) {
+        if (fs.existsSync(tenor2RecordingPath)) {
+          fs.unlinkSync(tenor2RecordingPath);
+        }
+      }
+    }
+    if (tuttiRecordingPaths.length) {
+      for (const tuttiRecordingPath of tuttiRecordingPaths) {
+        if (fs.existsSync(tuttiRecordingPath)) {
+          fs.unlinkSync(tuttiRecordingPath);
+        }
+      }
+    }
+    res.json({
+      result: false,
+      error: "Error uploading to Cloudinary: " + err.message,
+    });
+  }
+});
 // Get all partitions grouped by category in ascending order
 router.get("/groupedPartitions", async (req, res) => {
   // if (!checkBody(req.body, ["token"])) {

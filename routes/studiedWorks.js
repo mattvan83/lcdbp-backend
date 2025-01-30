@@ -478,6 +478,9 @@ router.post("/upload", async (req, res) => {
 });
 
 router.post("/uploadWorks", async (req, res) => {
+  // // Set a longer timeout for this specific route
+  // req.setTimeout(300000); // 5 minutes
+
   if (
     !checkBody(req.body, ["token", "title", "code", "isAtWork"]) ||
     !checkBody(req.files, ["partitionFromFront"])
@@ -693,7 +696,6 @@ router.post("/uploadWorks", async (req, res) => {
     const newWork = new Work(workFields);
     const savedWork = await newWork.save();
 
-    // Function to handle recording uploads for each voice type
     const createRecordings = async (
       recordingPaths,
       recordingDescriptions,
@@ -707,6 +709,7 @@ router.post("/uploadWorks", async (req, res) => {
             resource_type: "video",
             folder: "lcdbp/works/audio",
             use_filename: true,
+            timeout: 120000,
           }
         );
 
@@ -725,41 +728,46 @@ router.post("/uploadWorks", async (req, res) => {
       return recordings;
     };
 
-    // Create recordings for each voice type
-    const recordingsPromises = [
-      barytonRecordingPaths.length &&
-        createRecordings(
-          barytonRecordingPaths,
-          req.body.barytonRecordingDescriptions,
-          "BARYTON"
-        ),
-      bassRecordingPaths.length &&
-        createRecordings(
-          bassRecordingPaths,
-          req.body.bassRecordingDescriptions,
-          "BASS"
-        ),
-      tenor1RecordingPaths.length &&
-        createRecordings(
-          tenor1RecordingPaths,
-          req.body.tenor1RecordingDescriptions,
-          "TENOR1"
-        ),
-      tenor2RecordingPaths.length &&
-        createRecordings(
-          tenor2RecordingPaths,
-          req.body.tenor2RecordingDescriptions,
-          "TENOR2"
-        ),
-      tuttiRecordingPaths.length &&
-        createRecordings(
-          tuttiRecordingPaths,
-          req.body.tuttiRecordingDescriptions,
-          "TUTTI"
-        ),
-    ].filter(Boolean);
+    // Create recordings for each voice type sequentially
+    if (barytonRecordingPaths.length) {
+      await createRecordings(
+        barytonRecordingPaths,
+        req.body.barytonRecordingDescriptions,
+        "BARYTON"
+      );
+    }
 
-    await Promise.all(recordingsPromises);
+    if (bassRecordingPaths.length) {
+      await createRecordings(
+        bassRecordingPaths,
+        req.body.bassRecordingDescriptions,
+        "BASS"
+      );
+    }
+
+    if (tenor1RecordingPaths.length) {
+      await createRecordings(
+        tenor1RecordingPaths,
+        req.body.tenor1RecordingDescriptions,
+        "TENOR1"
+      );
+    }
+
+    if (tenor2RecordingPaths.length) {
+      await createRecordings(
+        tenor2RecordingPaths,
+        req.body.tenor2RecordingDescriptions,
+        "TENOR2"
+      );
+    }
+
+    if (tuttiRecordingPaths.length) {
+      await createRecordings(
+        tuttiRecordingPaths,
+        req.body.tuttiRecordingDescriptions,
+        "TUTTI"
+      );
+    }
 
     fs.unlinkSync(partitionPath);
     fs.unlinkSync(partitionThumbnailPath);
@@ -796,6 +804,9 @@ router.post("/uploadWorks", async (req, res) => {
 
     res.json({ result: true, newWork: workWithRecordings });
   } catch (err) {
+    // Add more detailed error logging
+    console.error("Upload error:", err);
+
     if (fs.existsSync(partitionPath)) {
       fs.unlinkSync(partitionPath);
     }
@@ -840,6 +851,7 @@ router.post("/uploadWorks", async (req, res) => {
     res.json({
       result: false,
       error: "Error uploading to Cloudinary: " + err.message,
+      details: err.stack,
     });
   }
 });

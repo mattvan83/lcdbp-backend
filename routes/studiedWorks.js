@@ -1142,6 +1142,75 @@ router.get("/groupedPartitions", async (req, res) => {
   // }
 });
 
+// Get all partitions grouped by category in ascending order
+router.post("/groupedPartitionsWorks", async (req, res) => {
+  if (!checkBody(req.body, ["token"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+  });
+
+  if (userFound) {
+    Work.aggregate([
+      {
+        $addFields: {
+          category: { $substr: ["$code", 0, 1] },
+        },
+      },
+      {
+        $group: {
+          _id: "$category",
+          partitions: {
+            $push: {
+              _id: "$_id",
+              code: "$code",
+              title: "$title",
+              artwork: "$artwork",
+              partitionUrl: "$partitionUrl",
+              partitionThumbnailUrl: "$partitionThumbnailUrl",
+              authorMusic: "$authorMusic",
+              isAtWork: "$isAtWork",
+              createdAt: "$createdAt",
+              updatedAt: "$updatedAt",
+            },
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          category: "$_id",
+          partitions: {
+            $sortArray: {
+              input: "$partitions",
+              sortBy: { code: 1, title: 1 },
+            },
+          },
+        },
+      },
+      {
+        $sort: { category: 1 },
+      },
+    ]).then((partitionsGrouped) => {
+      if (partitionsGrouped.length) {
+        const categories = partitionsGrouped.map((item) => item.category);
+
+        res.json({ result: true, categories, partitionsGrouped });
+      } else {
+        res.json({ result: false, error: "Partitions not found" });
+      }
+    });
+  } else {
+    res.json({
+      result: false,
+      error: "Membre non identifié en base de données",
+    });
+  }
+});
+
 // Get all work recordings grouped by voice in ascending order (title, recordingDescription)
 router.get("/groupedWorkRecordings", async (req, res) => {
   // if (!checkBody(req.body, ["token"])) {
@@ -1233,6 +1302,86 @@ router.get("/groupedWorkRecordings", async (req, res) => {
   //     error: "Membre non identifié en base de données",
   //   });
   // }
+});
+
+router.post("/groupedRecordingsWorks", async (req, res) => {
+  if (!checkBody(req.body, ["token"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+  });
+
+  if (userFound) {
+    try {
+      const workRecordingsGrouped = await Work.aggregate([
+        {
+          $lookup: {
+            from: "recordings",
+            localField: "_id",
+            foreignField: "workId",
+            as: "recordings",
+          },
+        },
+        {
+          $unwind: {
+            path: "$recordings",
+            preserveNullAndEmptyArrays: false,
+          },
+        },
+        {
+          $group: {
+            _id: "$recordings.voiceType",
+            workRecordings: {
+              $push: {
+                _id: "$recordings._id",
+                recordingUrl: "$recordings.recordingUrl",
+                recordingDescription: "$recordings.recordingDescription",
+                title: "$title",
+                artwork: "$artwork",
+                partitionUrl: "$partitionUrl",
+                partitionThumbnailUrl: "$partitionThumbnailUrl",
+                authorMusic: "$authorMusic",
+                createdAt: "$createdAt",
+                updatedAt: "$updatedAt",
+              },
+            },
+          },
+        },
+        {
+          $project: {
+            _id: 0,
+            voice: "$_id",
+            workRecordings: {
+              $sortArray: {
+                input: "$workRecordings",
+                sortBy: { title: 1, recordingDescription: 1 },
+              },
+            },
+          },
+        },
+        {
+          $sort: { voice: 1 },
+        },
+      ]);
+
+      if (workRecordingsGrouped.length) {
+        const voices = workRecordingsGrouped.map((item) => item.voice);
+        res.json({ result: true, voices, workRecordingsGrouped });
+      } else {
+        res.json({ result: false, error: "Work recordings not found" });
+      }
+    } catch (error) {
+      res.json({ result: false, error: error.message });
+    }
+  } else {
+    res.json({
+      result: false,
+      error: "Membre non identifié en base de données",
+    });
+  }
 });
 
 module.exports = router;

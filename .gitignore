@@ -69,3 +69,6 @@ typings/
 /studiedWorks.json
 /workRecordings.json
 /works.json
+tmp/*.pdf
+tmp/*.mp3
+tmp/*.png

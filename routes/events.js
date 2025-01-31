@@ -171,7 +171,7 @@ router.post("/uploadThumbnail", async (req, res) => {
   }
 });
 
-// Get all up-to-date events in list
+// Get all up-to-date events in descending order list
 router.get("/list", (req, res) => {
   Event.find().then((events) => {
     if (events.length) {
@@ -186,6 +186,41 @@ router.get("/list", (req, res) => {
         const sortedEvents = filteredEvents.sort((a, b) => {
           // Sort by recording date first
           const dateComparison = new Date(b.eventDate) - new Date(a.eventDate);
+          if (dateComparison !== 0) {
+            return dateComparison;
+          }
+          // If recording dates are equal, sort by title
+          return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+        });
+
+        res.json({
+          result: true,
+          events: sortedEvents,
+        });
+      } else {
+        res.json({ result: false, error: "Events have already passed" });
+      }
+    } else {
+      res.json({ result: false, error: "Events not found" });
+    }
+  });
+});
+
+// Get all up-to-date events in ascending order list
+router.get("/listMainPage", (req, res) => {
+  Event.find().then((events) => {
+    if (events.length) {
+      // Filter out events that have already passed
+      const currentDate = new Date();
+      const filteredEvents = events.filter((event) => {
+        return new Date(event.eventDate) >= currentDate;
+      });
+
+      if (filteredEvents.length) {
+        // Sort events in descending order
+        const sortedEvents = filteredEvents.sort((a, b) => {
+          // Sort by recording date first
+          const dateComparison = new Date(a.eventDate) - new Date(b.eventDate);
           if (dateComparison !== 0) {
             return dateComparison;
           }

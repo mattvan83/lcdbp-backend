@@ -7,6 +7,7 @@ const fs = require("fs");
 const User = require("../models/users");
 const PressReview = require("../models/pressReviews");
 const { checkBody } = require("../modules/checkBody");
+const { deleteFromCloudinary } = require("../modules/cloudinary");
 
 // Upload press review data to Db and Cloudinary under admin rights
 router.post("/upload", async (req, res) => {
@@ -237,6 +238,60 @@ router.get("/grouped", (req, res) => {
       res.json({ result: false, error: "Press reviews not found" });
     }
   });
+});
+
+// Delete all pressReviews documents specified by ids and all cloudinary files associated
+router.post("/deleteAll", async (req, res) => {
+  if (!checkBody(req.body, ["token", "ids"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  try {
+    const userFound = await User.findOne({
+      token: req.body.token,
+      type: "admin",
+    });
+
+    if (!userFound) {
+      return res.json({
+        result: false,
+        error: "Administrateur non identifié en base de données",
+      });
+    }
+
+    // Parse ids if it's a string
+    const ids = Array.isArray(req.body.ids)
+      ? req.body.ids
+      : JSON.parse(req.body.ids);
+
+    // Process each id sequentially
+    for (const id of ids) {
+      const selectedPressReview = await PressReview.findOne({ _id: id });
+
+      if (!selectedPressReview) {
+        return res.json({
+          result: false,
+          error: `PressReview ${id} not found`,
+        });
+      }
+
+      // Delete from Cloudinary first
+      if (selectedPressReview.thumbnailUrl) {
+        await deleteFromCloudinary(selectedPressReview.thumbnailUrl);
+      }
+
+      // Then delete from MongoDB
+      await PressReview.deleteOne({ _id: id });
+    }
+
+    res.json({
+      result: true,
+      message: "All selected pressReviews were successfully deleted",
+    });
+  } catch (err) {
+    res.json({ result: false, error: err.message });
+  }
 });
 
 module.exports = router;

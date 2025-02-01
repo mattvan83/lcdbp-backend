@@ -13,9 +13,15 @@ const deleteFromCloudinary = async (cloudinaryUrl) => {
 
     // Remove file extension
     const fullPublicId = path.substring(0, path.lastIndexOf("."));
+    // console.log("fullPublicId: ", fullPublicId);
+
+    // Determine resource type based on URL (video for audio files)
+    const isAudio = cloudinaryUrl.includes("/video/upload/");
 
     // Delete the resource
-    const result = await cloudinary.uploader.destroy(fullPublicId);
+    const result = await cloudinary.uploader.destroy(fullPublicId, {
+      resource_type: isAudio ? "video" : "image",
+    });
 
     if (result.result === "ok") {
       return true;

@@ -7,6 +7,7 @@ const fs = require("fs");
 const User = require("../models/users");
 const Listening = require("../models/listenings");
 const { checkBody } = require("../modules/checkBody");
+const { deleteFromCloudinary } = require("../modules/cloudinary");
 
 // Upload listening data to Db and Cloudinary under admin rights
 router.post("/upload", async (req, res) => {
@@ -274,6 +275,60 @@ router.get("/", (req, res) => {
       res.json({ result: false, error: "Listenings not found" });
     }
   });
+});
+
+// Delete all listenings documents specified by ids and all cloudinary files associated
+router.post("/deleteAll", async (req, res) => {
+  if (!checkBody(req.body, ["token", "ids"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  try {
+    const userFound = await User.findOne({
+      token: req.body.token,
+      type: "admin",
+    });
+
+    if (!userFound) {
+      return res.json({
+        result: false,
+        error: "Administrateur non identifié en base de données",
+      });
+    }
+
+    // Parse ids if it's a string
+    const ids = Array.isArray(req.body.ids)
+      ? req.body.ids
+      : JSON.parse(req.body.ids);
+
+    // Process each id sequentially
+    for (const id of ids) {
+      const selectedListening = await Listening.findOne({ _id: id });
+
+      if (!selectedListening) {
+        return res.json({ result: false, error: `Listening ${id} not found` });
+      }
+
+      // Delete from Cloudinary first
+      if (selectedListening.thumbnailUrl) {
+        await deleteFromCloudinary(selectedListening.thumbnailUrl);
+      }
+      if (selectedListening.audioUrl) {
+        await deleteFromCloudinary(selectedListening.audioUrl);
+      }
+
+      // Then delete from MongoDB
+      await Listening.deleteOne({ _id: id });
+    }
+
+    res.json({
+      result: true,
+      message: "All selected listenings were successfully deleted",
+    });
+  } catch (err) {
+    res.json({ result: false, error: err.message });
+  }
 });
 
 module.exports = router;

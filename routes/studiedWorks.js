@@ -10,6 +10,7 @@ const StudiedWork = require("../models/studiedWorks");
 const Work = require("../models/works");
 const Recording = require("../models/recordings");
 const { checkBody, checkWorkRecording } = require("../modules/checkBody");
+const { deleteFromCloudinary } = require("../modules/cloudinary");
 
 const asyncArrayMethod = async (array) => {
   return await Promise.all(
@@ -1381,6 +1382,121 @@ router.post("/groupedRecordingsWorks", async (req, res) => {
       result: false,
       error: "Membre non identifié en base de données",
     });
+  }
+});
+
+// Delete all recordings documents specified by ids and all cloudinary files associated
+router.post("/deleteAllRecordings", async (req, res) => {
+  if (!checkBody(req.body, ["token", "ids"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  try {
+    const userFound = await User.findOne({
+      token: req.body.token,
+      type: "admin",
+    });
+
+    if (!userFound) {
+      return res.json({
+        result: false,
+        error: "Administrateur non identifié en base de données",
+      });
+    }
+
+    // Parse ids if it's a string
+    const ids = Array.isArray(req.body.ids)
+      ? req.body.ids
+      : JSON.parse(req.body.ids);
+
+    // Process each id sequentially
+    for (const id of ids) {
+      const selectedRecording = await Recording.findOne({ _id: id });
+
+      if (!selectedRecording) {
+        return res.json({ result: false, error: `Recording ${id} not found` });
+      }
+
+      // Delete from Cloudinary first
+      if (selectedRecording.recordingUrl) {
+        await deleteFromCloudinary(selectedRecording.recordingUrl);
+      }
+
+      // Then delete from MongoDB
+      await Recording.deleteOne({ _id: id });
+    }
+
+    res.json({
+      result: true,
+      message: "All selected recordings were successfully deleted",
+    });
+  } catch (err) {
+    res.json({ result: false, error: err.message });
+  }
+});
+
+// Delete all works documents specified by ids, recordings documents and cloudinary files associated
+router.post("/deleteAllWorks", async (req, res) => {
+  if (!checkBody(req.body, ["token", "ids"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  try {
+    const userFound = await User.findOne({
+      token: req.body.token,
+      type: "admin",
+    });
+
+    if (!userFound) {
+      return res.json({
+        result: false,
+        error: "Administrateur non identifié en base de données",
+      });
+    }
+
+    // Parse ids if it's a string
+    const ids = Array.isArray(req.body.ids)
+      ? req.body.ids
+      : JSON.parse(req.body.ids);
+
+    // Process each id sequentially
+    for (const id of ids) {
+      const selectedWork = await Work.findOne({ _id: id }).populate(
+        "recordings"
+      );
+
+      if (!selectedWork) {
+        return res.json({ result: false, error: `Work ${id} not found` });
+      }
+
+      if (selectedWork.recordings.length) {
+        for (const recording of selectedWork.recordings) {
+          if (recording.recordingUrl) {
+            await deleteFromCloudinary(recording.recordingUrl);
+          }
+
+          await Recording.deleteOne({ _id: recording._id });
+        }
+      }
+
+      if (selectedWork.partitionUrl) {
+        await deleteFromCloudinary(selectedWork.partitionUrl);
+      }
+      if (selectedWork.partitionThumbnailUrl) {
+        await deleteFromCloudinary(selectedWork.partitionThumbnailUrl);
+      }
+
+      await Work.deleteOne({ _id: id });
+    }
+
+    res.json({
+      result: true,
+      message: "All selected works were successfully deleted",
+    });
+  } catch (err) {
+    res.json({ result: false, error: err.message });
   }
 });
 

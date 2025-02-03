@@ -920,8 +920,8 @@ router.post("/uploadPartition", async (req, res) => {
 
 router.post("/uploadPartitionThumbnail", async (req, res) => {
   if (
-    !checkBody(req.body, ["token"]) ||
-    !checkBody(req.files, ["partitionFromFront"])
+    !checkBody(req.body, ["token", "imageExtension"]) ||
+    !checkBody(req.files, ["partitionThumbnailFromFront"])
   ) {
     res.json({ result: false, error: "Missing or empty fields" });
     return;
@@ -940,45 +940,47 @@ router.post("/uploadPartitionThumbnail", async (req, res) => {
     return;
   }
 
-  const { partitionFromFront } = req.files;
+  const { partitionThumbnailFromFront } = req.files;
+
+  const { imageExtension } = req.body;
 
   const tmpDir = "./tmp";
   if (!fs.existsSync(tmpDir)) {
     fs.mkdirSync(tmpDir);
   }
 
-  const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
-  const partitionThumbnailPath = `${tmpDir}/${uniqid()}.png`;
+  // const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
+  const partitionThumbnailPath = `${tmpDir}/${uniqid()}${imageExtension}`;
 
   try {
     // Move partition file to a unique temp path
-    await partitionFromFront.mv(partitionPath);
+    await partitionThumbnailFromFront.mv(partitionThumbnailPath);
   } catch (err) {
     res.json({ result: false, error: "Error moving files: " + err.message });
     return;
   }
 
-  try {
-    // Convert partition first page to thumbnail and save it to a unique temp path
-    const options = {
-      density: 300, // image resolution
-      // quality: 200, // jpeg quality
-      outputFormat: "%s_page_%d",
-      outputType: "png",
-      pages: "1",
-    };
+  // try {
+  //   // Convert partition first page to thumbnail and save it to a unique temp path
+  //   const options = {
+  //     density: 300, // image resolution
+  //     // quality: 200, // jpeg quality
+  //     outputFormat: "%s_page_%d",
+  //     outputType: "png",
+  //     pages: "1",
+  //   };
 
-    const images = await pdf2image.convertPDF(partitionPath, options);
-    const imagePath = images[0].path;
-    fs.renameSync(imagePath, partitionThumbnailPath);
-  } catch (err) {
-    res.json({
-      result: false,
-      error:
-        "Error converting first page of .pdf partition to .png: " + err.message,
-    });
-    return;
-  }
+  //   const images = await pdf2image.convertPDF(partitionPath, options);
+  //   const imagePath = images[0].path;
+  //   fs.renameSync(imagePath, partitionThumbnailPath);
+  // } catch (err) {
+  //   res.json({
+  //     result: false,
+  //     error:
+  //       "Error converting first page of .pdf partition to .png: " + err.message,
+  //   });
+  //   return;
+  // }
 
   try {
     const partitionThumbnailResult = await cloudinary.uploader.upload(
@@ -990,7 +992,7 @@ router.post("/uploadPartitionThumbnail", async (req, res) => {
       }
     );
 
-    fs.unlinkSync(partitionPath);
+    // fs.unlinkSync(partitionPath);
     fs.unlinkSync(partitionThumbnailPath);
 
     res.json({
@@ -998,9 +1000,9 @@ router.post("/uploadPartitionThumbnail", async (req, res) => {
       partitionThumbnailUrl: partitionThumbnailResult.secure_url,
     });
   } catch (err) {
-    if (fs.existsSync(partitionPath)) {
-      fs.unlinkSync(partitionPath);
-    }
+    // if (fs.existsSync(partitionPath)) {
+    //   fs.unlinkSync(partitionPath);
+    // }
     if (fs.existsSync(partitionThumbnailPath)) {
       fs.unlinkSync(partitionThumbnailPath);
     }

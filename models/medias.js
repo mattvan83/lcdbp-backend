@@ -35,7 +35,7 @@ const mediaSchema = new mongoose.Schema(
     //   required: true,
     //   enum: Object.values(mediaType),
     // },
-    mediaUrl: {
+    mediaUrls: {
       type: [String],
       required: true,
     },

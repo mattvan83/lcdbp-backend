@@ -14,6 +14,7 @@ var pressReviewsRouter = require("./routes/pressReviews");
 var eventsRouter = require("./routes/events");
 var studiedWorksRouter = require("./routes/studiedWorks");
 var newsRouter = require("./routes/news");
+var mediasRouter = require("./routes/medias");
 
 // const swaggerUi = require("swagger-ui-express");
 // const swaggerFile = require("./swagger-output.json");
@@ -44,5 +45,6 @@ app.use("/pressReviews", pressReviewsRouter);
 app.use("/events", eventsRouter);
 app.use("/studiedWorks", studiedWorksRouter);
 app.use("/news", newsRouter);
+app.use("/medias", mediasRouter);
 
 module.exports = app;

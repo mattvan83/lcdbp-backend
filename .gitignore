@@ -72,3 +72,4 @@ typings/
 tmp/*.pdf
 tmp/*.mp3
 tmp/*.png
+/medias.js

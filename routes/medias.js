@@ -3,6 +3,7 @@ var router = express.Router();
 const uniqid = require("uniqid");
 const cloudinary = require("cloudinary").v2;
 const fs = require("fs");
+const path = require("path");
 
 const User = require("../models/users");
 const Media = require("../models/medias");
@@ -22,8 +23,81 @@ function getFileTypeFromMime(mimeType) {
 
 // Upload media data to Db and Cloudinary under admin rights
 router.post("/upload", async (req, res) => {
+  const mediaTypes = {
+    audio: { paths: [], results: [], reqKey: "audiosFromFront" },
+    image: { paths: [], results: [], reqKey: "imagesFromFront" },
+    video: { paths: [], results: [], reqKey: "videosFromFront" },
+  };
+  const tmpDir = path.join(__dirname, "../tmp");
+
+  async function cleanupResources() {
+    // Cleanup temp files
+    Object.values(mediaTypes).forEach((type) => {
+      type.paths.forEach(({ path }) => {
+        if (fs.existsSync(path)) {
+          fs.unlinkSync(path);
+        }
+      });
+    });
+
+    // Try to remove tmp directory if empty
+    try {
+      if (fs.existsSync(tmpDir) && fs.readdirSync(tmpDir).length === 0) {
+        fs.rmdirSync(tmpDir);
+      }
+    } catch (cleanupError) {
+      console.error("Failed to cleanup tmp directory:", cleanupError);
+    }
+  }
+
+  async function processMediaFiles(mediaType, files) {
+    if (!files?.length) {
+      return;
+    }
+
+    // Save files to tmp directory
+    for (const file of files) {
+      const filePath = path.join(
+        tmpDir,
+        `${uniqid()}${path.extname(file.name)}`
+      );
+      await file.mv(filePath);
+      mediaType.paths.push({
+        path: filePath,
+        mimetype: file.mimetype,
+      });
+    }
+
+    console.log("mediaType.paths: ", mediaType.paths);
+
+    // Upload to Cloudinary
+    for (const { path: filePath, mimetype } of mediaType.paths) {
+      const { type, folder } = getFileTypeFromMime(mimetype);
+
+      try {
+        const result = await cloudinary.uploader.upload(filePath, {
+          resource_type: type,
+          folder: folder,
+          use_filename: true,
+          timeout: 120000,
+          chunk_size: 6000000,
+          eager_async: true,
+        });
+        mediaType.results.push(result);
+      } catch (uploadError) {
+        console.error(`Failed to upload file ${filePath}:`, uploadError);
+        throw new Error(`Upload failed: ${uploadError.message}`);
+      }
+    }
+  }
+
   try {
-    if (!req.files || !req.files.mediasFromFront) {
+    if (
+      !req.files ||
+      (!req.files.audiosFromFront &&
+        !req.files.imagesFromFront &&
+        !req.files.videosFromFront)
+    ) {
       res.json({ result: false, error: "No files were uploaded" });
       return;
     }
@@ -48,41 +122,18 @@ router.post("/upload", async (req, res) => {
       return;
     }
 
-    const { mediasFromFront } = req.files;
-    const mediaFiles = Array.isArray(mediasFromFront)
-      ? mediasFromFront
-      : [mediasFromFront];
-
-    const tmpDir = "./tmp";
     if (!fs.existsSync(tmpDir)) {
-      fs.mkdirSync(tmpDir);
+      fs.mkdirSync(tmpDir, { recursive: true });
     }
 
-    const mediaPaths = [];
-    const mediaResults = [];
-
-    if (mediaFiles.length) {
-      for (const mediaFile of mediaFiles) {
-        const mediaFilePath = `${tmpDir}/${uniqid()}${mediaFile.name.substring(
-          mediaFile.name.lastIndexOf(".")
-        )}`;
-        await mediaFile.mv(mediaFilePath);
-        mediaPaths.push({
-          path: mediaFilePath,
-          mimetype: mediaFile.mimetype,
-        });
-      }
-    }
-
-    if (mediaPaths.length) {
-      for (const { path: mediaPath, mimetype } of mediaPaths) {
-        const { type, folder } = getFileTypeFromMime(mimetype);
-        const mediaResult = await cloudinary.uploader.upload(mediaPath, {
-          resource_type: type,
-          folder: folder,
-          use_filename: true,
-        });
-        mediaResults.push(mediaResult);
+    // Process each media type
+    for (const [key, mediaType] of Object.entries(mediaTypes)) {
+      const files = req.files[mediaType.reqKey];
+      if (files) {
+        await processMediaFiles(
+          mediaType,
+          Array.isArray(files) ? files : [files]
+        );
       }
     }
 
@@ -92,32 +143,26 @@ router.post("/upload", async (req, res) => {
       mediaDate,
       title,
       mediaCategory,
-      mediaUrls: mediaResults.map((mediaResult) => mediaResult.secure_url),
+      audioUrls: mediaTypes.audio.results.map((result) => result.secure_url),
+      imageUrls: mediaTypes.image.results.map((result) => result.secure_url),
+      videoUrls: mediaTypes.video.results.map((result) => result.secure_url),
     };
 
     const newMedia = new Media(mediaFields);
     const newMediaDB = await newMedia.save();
 
-    mediaPaths.forEach(({ path }) => {
-      if (fs.existsSync(path)) {
-        fs.unlinkSync(path);
-      }
-    });
+    await cleanupResources();
 
     res.json({ result: true, newMedia: newMediaDB });
   } catch (error) {
-    if (mediaPaths.length) {
-      mediaPaths.forEach(({ path }) => {
-        if (fs.existsSync(path)) {
-          fs.unlinkSync(path);
-        }
-      });
-    }
+    await cleanupResources();
 
-    // Cleanup Cloudinary uploads if database save failed
-    if (mediaResults.length && error.message.includes("Database error")) {
-      for (const mediaResult of mediaResults) {
-        await deleteFromCloudinary(mediaResult.secure_url);
+    // Cleanup all Cloudinary uploads if database save failed
+    if (error.message.includes("Database error")) {
+      for (const type of Object.values(mediaTypes)) {
+        for (const result of type.results) {
+          await deleteFromCloudinary(result.secure_url);
+        }
       }
     }
 

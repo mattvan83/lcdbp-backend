@@ -104,7 +104,7 @@ router.post("/upload", async (req, res) => {
 
 router.post("/uploadThumbnail", async (req, res) => {
   if (
-    !checkBody(req.body, ["token", "imageExtension"]) ||
+    !checkBody(req.body, ["token"]) ||
     !checkBody(req.files, ["thumbnailFromFront"])
   ) {
     res.json({ result: false, error: "Missing or empty fields" });
@@ -119,39 +119,27 @@ router.post("/uploadThumbnail", async (req, res) => {
   if (userFound) {
     const { thumbnailFromFront } = req.files;
 
-    const { imageExtension } = req.body;
-
-    const tmpDir = "./tmp";
-    if (!fs.existsSync(tmpDir)) {
-      fs.mkdirSync(tmpDir);
-    }
-
-    const thumbnailPath = `${tmpDir}/${uniqid()}${imageExtension}`;
-
     try {
-      await thumbnailFromFront.mv(thumbnailPath);
-    } catch (err) {
-      res.json({ result: false, error: "Error moving files: " + err.message });
-      return;
-    }
-
-    try {
-      const imageResult = await cloudinary.uploader.upload(thumbnailPath, {
-        resource_type: "image",
-        folder: "lcdbp/pressReviews/images",
-        use_filename: true,
-      });
-
-      fs.unlinkSync(thumbnailPath);
+      const uniqueFilename = uniqid();
+      const imageResult = await cloudinary.uploader.upload(
+        thumbnailFromFront.tempFilePath,
+        {
+          resource_type: "image",
+          folder: "lcdbp/pressReviews/images",
+          public_id: uniqueFilename,
+          use_filename: false,
+          timeout: 120000,
+          chunk_size: 6000000,
+          eager_async: true,
+        }
+      );
 
       res.json({ result: true, thumbnailUrl: imageResult.secure_url });
     } catch (err) {
-      if (fs.existsSync(thumbnailPath)) {
-        fs.unlinkSync(thumbnailPath);
-      }
+      console.error("Cloudinary upload error:", err);
       res.json({
         result: false,
-        error: "Error uploading to Cloudinary: " + err.message,
+        error: "Error uploading to Cloudinary: " + (err.message || err),
       });
     }
   } else {

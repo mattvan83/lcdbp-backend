@@ -890,6 +890,9 @@ router.post("/uploadPartition", async (req, res) => {
         folder: "lcdbp/works/partitions",
         public_id: uniqueFilename,
         use_filename: false,
+        timeout: 120000,
+        chunk_size: 6000000,
+        eager_async: true,
       }
     );
 
@@ -958,6 +961,9 @@ router.post("/uploadPartitionThumbnail", async (req, res) => {
         folder: "lcdbp/works/partitions",
         public_id: uniqueFilename,
         use_filename: false,
+        timeout: 120000,
+        chunk_size: 6000000,
+        eager_async: true,
       }
     );
 
@@ -1007,6 +1013,9 @@ router.post("/uploadRecording", async (req, res) => {
         folder: "lcdbp/works/audio",
         public_id: uniqueFilename,
         use_filename: false,
+        timeout: 120000,
+        chunk_size: 6000000,
+        eager_async: true,
       }
     );
 

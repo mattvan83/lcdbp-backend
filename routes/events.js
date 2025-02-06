@@ -138,9 +138,9 @@ router.post("/uploadThumbnail", async (req, res) => {
           folder: "lcdbp/events/images",
           public_id: uniqueFilename,
           use_filename: false,
-          timeout: 120000,
-          chunk_size: 6000000,
-          eager_async: true,
+          // timeout: 120000,
+          // chunk_size: 6000000,
+          // eager_async: true,
         }
       );
 

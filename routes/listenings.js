@@ -158,9 +158,9 @@ router.post("/uploadListening", async (req, res) => {
           folder: "lcdbp/listenings/audio",
           public_id: uniqueFilename,
           use_filename: false,
-          timeout: 120000,
-          chunk_size: 6000000,
-          eager_async: true,
+          // timeout: 120000,
+          // chunk_size: 6000000,
+          // eager_async: true,
         }
       );
 
@@ -206,9 +206,9 @@ router.post("/uploadThumbnail", async (req, res) => {
           folder: "lcdbp/listenings/images",
           public_id: uniqueFilename,
           use_filename: false,
-          timeout: 120000,
-          chunk_size: 6000000,
-          eager_async: true,
+          // timeout: 120000,
+          // chunk_size: 6000000,
+          // eager_async: true,
         }
       );
 

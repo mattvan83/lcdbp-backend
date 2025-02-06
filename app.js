@@ -22,7 +22,12 @@ const bodyParser = require("body-parser");
 
 var app = express();
 const fileUpload = require("express-fileupload");
-app.use(fileUpload());
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
 
 // /* Middlewares */
 app.use(bodyParser.json());

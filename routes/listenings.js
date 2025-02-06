@@ -132,11 +132,56 @@ router.post("/upload", async (req, res) => {
   }
 });
 
+// router.post("/uploadListening", async (req, res) => {
+//   if (
+//     !checkBody(req.body, ["token"]) ||
+//     !checkBody(req.files, ["listeningFromFront"])
+//   ) {
+//     res.json({ result: false, error: "Missing or empty fields" });
+//     return;
+//   }
+
+//   const userFound = await User.findOne({
+//     token: req.body.token,
+//     type: "admin",
+//   });
+
+//   if (userFound) {
+//     const { listeningFromFront } = req.files;
+
+//     try {
+//       const uniqueFilename = uniqid();
+//       const audioResult = await cloudinary.uploader.upload(
+//         listeningFromFront.tempFilePath,
+//         {
+//           resource_type: "video",
+//           folder: "lcdbp/listenings/audio",
+//           public_id: uniqueFilename,
+//           use_filename: false,
+//           // timeout: 120000,
+//           // chunk_size: 6000000,
+//           // eager_async: true,
+//         }
+//       );
+
+//       res.json({ result: true, audioUrl: audioResult.secure_url });
+//     } catch (err) {
+//       console.error("Cloudinary upload error:", err);
+//       res.json({
+//         result: false,
+//         error: "Error uploading to Cloudinary: " + (err.message || err),
+//       });
+//     }
+//   } else {
+//     res.json({
+//       result: false,
+//       error: "Administrateur non identifié en base de données",
+//     });
+//   }
+// });
+
 router.post("/uploadListening", async (req, res) => {
-  if (
-    !checkBody(req.body, ["token"]) ||
-    !checkBody(req.files, ["listeningFromFront"])
-  ) {
+  if (!checkBody(req.body, ["token"])) {
     res.json({ result: false, error: "Missing or empty fields" });
     return;
   }
@@ -147,31 +192,67 @@ router.post("/uploadListening", async (req, res) => {
   });
 
   if (userFound) {
-    const { listeningFromFront } = req.files;
-
     try {
+      const timestamp = Math.round(new Date().getTime() / 1000);
       const uniqueFilename = uniqid();
-      const audioResult = await cloudinary.uploader.upload(
-        listeningFromFront.tempFilePath,
-        {
-          resource_type: "video",
-          folder: "lcdbp/listenings/audio",
-          public_id: uniqueFilename,
-          use_filename: false,
-          // timeout: 120000,
-          // chunk_size: 6000000,
-          // eager_async: true,
-        }
+
+      // Create params object with all required fields
+      const paramsToSign = {
+        eager_async: true,
+        folder: "lcdbp/listenings/audio",
+        public_id: uniqueFilename,
+        timestamp: timestamp,
+      };
+
+      // Generate the signature
+      const signature = cloudinary.utils.api_sign_request(
+        paramsToSign,
+        process.env.CLOUDINARY_API_SECRET
       );
 
-      res.json({ result: true, audioUrl: audioResult.secure_url });
+      res.json({
+        result: true,
+        uploadUrl: `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/video/upload`,
+        params: {
+          api_key: process.env.CLOUDINARY_API_KEY,
+          folder: paramsToSign.folder,
+          public_id: paramsToSign.public_id,
+          resource_type: "video",
+          timestamp: paramsToSign.timestamp,
+          signature: signature,
+          timeout: 120000,
+          chunk_size: 6000000,
+          eager_async: paramsToSign.eager_async,
+        },
+      });
     } catch (err) {
-      console.error("Cloudinary upload error:", err);
+      console.error("Signature generation error:", err);
       res.json({
         result: false,
-        error: "Error uploading to Cloudinary: " + (err.message || err),
+        error: "Error generating upload signature: " + (err.message || err),
       });
     }
+  } else {
+    res.json({
+      result: false,
+      error: "Administrateur non identifié en base de données",
+    });
+  }
+});
+
+router.post("/uploadListeningComplete", async (req, res) => {
+  if (!checkBody(req.body, ["token", "audioUrl"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+    type: "admin",
+  });
+
+  if (userFound) {
+    res.json({ result: true, audioUrl: req.body.audioUrl });
   } else {
     res.json({
       result: false,
@@ -206,9 +287,9 @@ router.post("/uploadThumbnail", async (req, res) => {
           folder: "lcdbp/listenings/images",
           public_id: uniqueFilename,
           use_filename: false,
-          // timeout: 120000,
-          // chunk_size: 6000000,
-          // eager_async: true,
+          timeout: 120000,
+          chunk_size: 6000000,
+          eager_async: true,
         }
       );
 

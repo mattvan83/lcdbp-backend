@@ -881,46 +881,31 @@ router.post("/uploadPartition", async (req, res) => {
 
   const { partitionFromFront } = req.files;
 
-  const tmpDir = "./tmp";
-  if (!fs.existsSync(tmpDir)) {
-    fs.mkdirSync(tmpDir);
-  }
-
-  const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
-
   try {
-    // Move partition file to a unique temp path
-    await partitionFromFront.mv(partitionPath);
-  } catch (err) {
-    res.json({ result: false, error: "Error moving files: " + err.message });
-    return;
-  }
-
-  try {
-    const partitionResult = await cloudinary.uploader.upload(partitionPath, {
-      resource_type: "raw",
-      folder: "lcdbp/works/partitions",
-      use_filename: true,
-    });
-
-    fs.unlinkSync(partitionPath);
+    const uniqueFilename = `${uniqid()}.pdf`;
+    const partitionResult = await cloudinary.uploader.upload(
+      partitionFromFront.tempFilePath,
+      {
+        resource_type: "raw",
+        folder: "lcdbp/works/partitions",
+        public_id: uniqueFilename,
+        use_filename: false,
+      }
+    );
 
     res.json({ result: true, partitionUrl: partitionResult.secure_url });
   } catch (err) {
-    if (fs.existsSync(partitionPath)) {
-      fs.unlinkSync(partitionPath);
-    }
-
+    console.error("Cloudinary upload error:", err);
     res.json({
       result: false,
-      error: "Error uploading to Cloudinary: " + err.message,
+      error: "Error uploading to Cloudinary: " + (err.message || err),
     });
   }
 });
 
 router.post("/uploadPartitionThumbnail", async (req, res) => {
   if (
-    !checkBody(req.body, ["token", "imageExtension"]) ||
+    !checkBody(req.body, ["token"]) ||
     !checkBody(req.files, ["partitionThumbnailFromFront"])
   ) {
     res.json({ result: false, error: "Missing or empty fields" });
@@ -941,24 +926,6 @@ router.post("/uploadPartitionThumbnail", async (req, res) => {
   }
 
   const { partitionThumbnailFromFront } = req.files;
-
-  const { imageExtension } = req.body;
-
-  const tmpDir = "./tmp";
-  if (!fs.existsSync(tmpDir)) {
-    fs.mkdirSync(tmpDir);
-  }
-
-  // const partitionPath = `${tmpDir}/${uniqid()}.pdf`;
-  const partitionThumbnailPath = `${tmpDir}/${uniqid()}${imageExtension}`;
-
-  try {
-    // Move partition file to a unique temp path
-    await partitionThumbnailFromFront.mv(partitionThumbnailPath);
-  } catch (err) {
-    res.json({ result: false, error: "Error moving files: " + err.message });
-    return;
-  }
 
   // try {
   //   // Convert partition first page to thumbnail and save it to a unique temp path
@@ -983,40 +950,33 @@ router.post("/uploadPartitionThumbnail", async (req, res) => {
   // }
 
   try {
+    const uniqueFilename = uniqid();
     const partitionThumbnailResult = await cloudinary.uploader.upload(
-      partitionThumbnailPath,
+      partitionThumbnailFromFront.tempFilePath,
       {
         resource_type: "image",
         folder: "lcdbp/works/partitions",
-        use_filename: true,
+        public_id: uniqueFilename,
+        use_filename: false,
       }
     );
-
-    // fs.unlinkSync(partitionPath);
-    fs.unlinkSync(partitionThumbnailPath);
 
     res.json({
       result: true,
       partitionThumbnailUrl: partitionThumbnailResult.secure_url,
     });
   } catch (err) {
-    // if (fs.existsSync(partitionPath)) {
-    //   fs.unlinkSync(partitionPath);
-    // }
-    if (fs.existsSync(partitionThumbnailPath)) {
-      fs.unlinkSync(partitionThumbnailPath);
-    }
-
+    console.error("Cloudinary upload error:", err);
     res.json({
       result: false,
-      error: "Error uploading to Cloudinary: " + err.message,
+      error: "Error uploading to Cloudinary: " + (err.message || err),
     });
   }
 });
 
 router.post("/uploadRecording", async (req, res) => {
   if (
-    !checkBody(req.body, ["token", "recordingExtension"]) ||
+    !checkBody(req.body, ["token"]) ||
     !checkBody(req.files, ["recordingFromFront"])
   ) {
     res.json({ result: false, error: "Missing or empty fields" });
@@ -1037,41 +997,25 @@ router.post("/uploadRecording", async (req, res) => {
   }
 
   const { recordingFromFront } = req.files;
-  const { recordingExtension } = req.body;
-
-  const tmpDir = "./tmp";
-  if (!fs.existsSync(tmpDir)) {
-    fs.mkdirSync(tmpDir);
-  }
-
-  const recordingPath = `${tmpDir}/${uniqid()}${recordingExtension}`;
 
   try {
-    // Move recording file to a unique temp path
-    await recordingFromFront.mv(recordingPath);
-  } catch (err) {
-    res.json({ result: false, error: "Error moving files: " + err.message });
-    return;
-  }
-
-  try {
-    const recordingResult = await cloudinary.uploader.upload(recordingPath, {
-      resource_type: "video",
-      folder: "lcdbp/works/audio",
-      use_filename: true,
-    });
-
-    fs.unlinkSync(recordingPath);
+    const uniqueFilename = uniqid();
+    const recordingResult = await cloudinary.uploader.upload(
+      recordingFromFront.tempFilePath,
+      {
+        resource_type: "video",
+        folder: "lcdbp/works/audio",
+        public_id: uniqueFilename,
+        use_filename: false,
+      }
+    );
 
     res.json({ result: true, recordingUrl: recordingResult.secure_url });
   } catch (err) {
-    if (fs.existsSync(recordingPath)) {
-      fs.unlinkSync(recordingPath);
-    }
-
+    console.error("Cloudinary upload error:", err);
     res.json({
       result: false,
-      error: "Error uploading to Cloudinary: " + err.message,
+      error: "Error uploading to Cloudinary: " + (err.message || err),
     });
   }
 });

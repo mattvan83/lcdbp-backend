@@ -1113,16 +1113,6 @@ router.post("/uploadRecordingComplete", async (req, res) => {
 
 // Get all partitions grouped by category in ascending order
 router.get("/groupedPartitions", async (req, res) => {
-  // if (!checkBody(req.body, ["token"])) {
-  //   res.json({ result: false, error: "Missing or empty fields" });
-  //   return;
-  // }
-
-  // const userFound = await User.findOne({
-  //   token: req.body.token,
-  // });
-
-  // if (userFound) {
   StudiedWork.aggregate([
     {
       $addFields: {
@@ -1172,12 +1162,6 @@ router.get("/groupedPartitions", async (req, res) => {
       res.json({ result: false, error: "Partitions not found" });
     }
   });
-  // } else {
-  //   res.json({
-  //     result: false,
-  //     error: "Membre non identifié en base de données",
-  //   });
-  // }
 });
 
 // Get all partitions grouped by category in ascending order
@@ -1251,16 +1235,6 @@ router.post("/groupedPartitionsWorks", async (req, res) => {
 
 // Get all work recordings grouped by voice in ascending order (title, recordingDescription)
 router.get("/groupedWorkRecordings", async (req, res) => {
-  // if (!checkBody(req.body, ["token"])) {
-  //   res.json({ result: false, error: "Missing or empty fields" });
-  //   return;
-  // }
-
-  // const userFound = await User.findOne({
-  //   token: req.body.token,
-  // });
-
-  // if (userFound) {
   StudiedWork.aggregate([
     {
       $addFields: {
@@ -1334,12 +1308,6 @@ router.get("/groupedWorkRecordings", async (req, res) => {
       res.json({ result: false, error: "Work recordings not found" });
     }
   });
-  // } else {
-  //   res.json({
-  //     result: false,
-  //     error: "Membre non identifié en base de données",
-  //   });
-  // }
 });
 
 router.post("/groupedRecordingsWorks", async (req, res) => {

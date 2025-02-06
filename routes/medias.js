@@ -174,4 +174,101 @@ router.post("/upload", async (req, res) => {
   }
 });
 
+// Get all medias grouped by mediaCategory (asc) then by year (desc)
+router.post("/groupedMedias", async (req, res) => {
+  if (!checkBody(req.body, ["token"])) {
+    res.json({ result: false, error: "Missing or empty fields" });
+    return;
+  }
+
+  const userFound = await User.findOne({
+    token: req.body.token,
+  });
+
+  if (userFound) {
+    Media.aggregate([
+      {
+        $addFields: {
+          year: { $year: { $toDate: "$mediaDate" } },
+        },
+      },
+      {
+        $group: {
+          _id: {
+            category: "$mediaCategory",
+            year: "$year",
+          },
+          medias: {
+            $push: {
+              _id: "$_id",
+              mediaDate: "$mediaDate",
+              title: "$title",
+              audioUrls: "$audioUrls",
+              imageUrls: "$imageUrls",
+              videoUrls: "$videoUrls",
+              createdAt: "$createdAt",
+              updatedAt: "$updatedAt",
+            },
+          },
+        },
+      },
+      {
+        $group: {
+          _id: "$_id.category",
+          yearsGrouped: {
+            $push: {
+              year: "$_id.year",
+              medias: {
+                $sortArray: {
+                  input: "$medias",
+                  sortBy: { mediaDate: -1, title: 1 },
+                },
+              },
+            },
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          mediaCategory: "$_id",
+          years: {
+            $map: {
+              input: {
+                $sortArray: {
+                  input: "$yearsGrouped",
+                  sortBy: { year: -1 },
+                },
+              },
+              in: "$$this.year",
+            },
+          },
+          yearsGrouped: {
+            $sortArray: {
+              input: "$yearsGrouped",
+              sortBy: { year: -1 },
+            },
+          },
+        },
+      },
+      {
+        $sort: { mediaCategory: 1 },
+      },
+    ]).then((mediasGrouped) => {
+      if (mediasGrouped.length) {
+        const mediaCategories = mediasGrouped.map((item) => item.mediaCategory);
+
+        res.json({ result: true, mediaCategories, mediasGrouped });
+      } else {
+        res.json({ result: false, error: "Medias not found" });
+      }
+    });
+  } else {
+    res.json({
+      result: false,
+      error: "Membre non identifié en base de données",
+    });
+  }
+});
+
 module.exports = router;

@@ -240,7 +240,7 @@ router.post("/groupedMedias", async (req, res) => {
                   sortBy: { year: -1 },
                 },
               },
-              in: "$$this.year",
+              in: { $toString: "$$this.year" },
             },
           },
           yearsGrouped: {
